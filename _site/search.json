@@ -1,38 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "E155 Portfolio",
-    "section": "",
-    "text": "title: “E155 Portfolio” imgaes: images/placeholder.jpeg.png about: template: jolla links: - icon: linkedin text: Linkedin href: https://www.linkedin.com/in/esteban-gonzalez-981a2a430/ - icon: github text: Github href: https://github.com/estgonzalez-hub/Micro_Ps\n\nThis is a Quarto website.\nHello my name is Esteban Gonzalez  Link to Github"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "index.html#title-e155-portfolio",
-    "href": "index.html#title-e155-portfolio",
-    "title": "E155 Portfolio",
-    "section": "title: “E155 Portfolio”",
-    "text": "title: “E155 Portfolio”\nThis is a Quarto website.\nHello my name is Esteban Gonzalez  Link to Github"
-  },
-  {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "E155 Blog",
-    "section": "",
-    "text": "Hello Quarto\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nSep 8, 2024\n\n\nEsteban Gonzalez\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "resources.html",
     "href": "resources.html",
     "title": "Resources",
     "section": "",
-    "text": "A collection of resources referenced throughout this course.\n\nE155 Class Website"
+    "text": "A collection of resources referenced for labs.\n\nE155 Class Website"
   },
   {
     "objectID": "labs.html",
@@ -40,20 +12,6 @@
     "title": "Labs",
     "section": "",
     "text": "This page contains a summary of the labs completed for E155."
-  },
-  {
-    "objectID": "labs.html#lab-1",
-    "href": "labs.html#lab-1",
-    "title": "Labs",
-    "section": "Lab 1",
-    "text": "Lab 1\nDescription of Lab 1."
-  },
-  {
-    "objectID": "labs.html#lab-2",
-    "href": "labs.html#lab-2",
-    "title": "Labs",
-    "section": "Lab 2",
-    "text": "Lab 2\nDescription of Lab 2."
   },
   {
     "objectID": "labs.html#lab-1---board-assembly-and-testing",
@@ -103,5 +61,26 @@
     "title": "Labs",
     "section": "Lab 7 - The Advanced Encryption Standard (AES)",
     "text": "Lab 7 - The Advanced Encryption Standard (AES)\nDescription of Lab 7."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "E155 Blog",
+    "section": "",
+    "text": "Hello Quarto\n\n\nI am very excited to be taking MicroPs this semester. It is a challenging course that will improve my technical abilities and time management skills. I am very passionate about this topic and be in a class that I’ve heard so much about.\n\n\n\n\n\nSep 8, 2024\n\n\nEsteban Gonzalez\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "E155 Portfolio",
+    "section": "",
+    "text": "title: “E155 Portfolio” imgaes: images/placeholder.jpeg.png about: template: jolla links: - icon: linkedin text: Linkedin href: https://www.linkedin.com/in/esteban-gonzalez-981a2a430/ - icon: github text: Github href: https://github.com/estgonzalez-hub/Micro_Ps\n\nThis is a Quarto website.\nHello my name is Esteban Gonzalez  Link to Github"
   }
 ]
