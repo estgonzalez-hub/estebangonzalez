@@ -15,6 +15,3 @@ about:
 
 Hello my name is Esteban Gonzalez. I am an Engineering student at Harvey Mudd College.
 
-[Link to Github](https://github.com/estgonzalez-hub/Micro_Ps)
-
-[Link to LinkedIn](https://www.linkedin.com/in/esteban-gonzalez-981a2a430/)
