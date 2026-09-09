@@ -18,7 +18,7 @@
     "href": "labs.html#lab-1---board-assembly-and-testing",
     "title": "Labs",
     "section": "Lab 1 - Board Assembly and Testing",
-    "text": "Lab 1 - Board Assembly and Testing\n\nOverview\nFor this lab I assembled the E155 board and tested it. After soldering all the components on, I programmed a 7 segment display to show hexadecimal digits taking four switches as binary inputs. Also blinked an LED using the Updunio’s internal HSOSC oscillator.\n\n\nDesign\nThere were two important considerations for the design of this project. The first was the resistor values to use for the seven segment display.\n\n\nSchematics\n\n\nTesting\nFigure 1. Waveform showing the top module being tested Figure 1. Waveform showing the top module being tested\nFigure 2. Waveform showing the seven segment display being tested Figure 2. Waveform showing the seven segment display being tested\nFigure 3. Waveform showing the counter and led[2] Figure 3. Waveform showing the counter and led[2]"
+    "text": "Lab 1 - Board Assembly and Testing\n\nOverview\nFor this lab I assembled the E155 board and tested it. After soldering all the components on, I programmed a 7 segment display to show hexadecimal digits taking four switches as binary inputs. Also blinked an LED using the Updunio’s internal HSOSC oscillator.\n\n\nDesign\nThere were two important considerations for the design of this project. The first was the resistor values to use for the seven segment display.\n\n\nSchematics\n\n\nTesting\n Figure 1. Waveform showing the top module being tested\n Figure 2. Waveform showing the seven segment display being tested\n Figure 3. Waveform showing the counter and led[2]"
   },
   {
     "objectID": "labs.html#lab-2---multiplexed-7-segment-display",

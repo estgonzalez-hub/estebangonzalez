@@ -27,13 +27,13 @@ for the seven segment display.
 ### Testing
 
 
-[Figure 1. Waveform showing the top module being tested](images/top_testbench.png)
+![Figure 1. Waveform showing the top module being tested](images/top_testbench.png)
 Figure 1. Waveform showing the top module being tested
 
-[Figure 2. Waveform showing the seven segment display being tested](images/display.png)
+![Figure 2. Waveform showing the seven segment display being tested](images/display.png)
 Figure 2. Waveform showing the seven segment display being tested
 
-[Figure 3. Waveform showing the counter and led[2]](images/counter.png)
+![Figure 3. Waveform showing the counter and led[2]](images/counter.png)
 Figure 3. Waveform showing the counter and led[2]
 
 
