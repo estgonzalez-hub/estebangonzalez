@@ -23,15 +23,15 @@ The source code for the project can be found in the associated
 
 ### Technical Documentation
 
-![Block Diagram](images/block_diagram_lab1.jpg)
-Figure 1. Block diagram of Verilog design.
+![Block Diagram](images/block_diagram_lab1.jpg){fig-cap="Figure 1. Block diagram of Verilog design."}
+
 
 The block diagram in Figure 1 demonstrates the overall architecture of the design. The top level module includes three submodules: the  the high-speed oscillator block (hf_osc), the counter module (blinking_led), and the seven segment display block (seven_segment_display). 
 
 ### Schematic
 
-![Schematic](images/schematic_lab1.jpg)
-Figure 2. Schematic of the physical circuit.
+![Schematic](images/schematic_lab1.jpg){fig-cap="Figure 2. Schematic of the physical circuit."}
+
 
 The schematic in Figure 2 demonstrates the physical layout of the design. The LEDs from the seven segment display were connected to 150 Ω resistors. 
 
@@ -47,20 +47,20 @@ All the prescribed tasks were accomplished. The seven segment display worked as 
 
 The design met all intended design objectives.
 
-![Figure 3. Waveform showing the top module being tested](images/top_testbench.png)
-Figure 3. Waveform showing the top module being tested
+![Figure 3. Waveform showing the top module being tested](images/top_testbench.png){fig-cap="Figure 3. Waveform showing the top module being tested"}
 
-Figure 3 shows a screenshot of the QuestaSim simulation for the top module. 
 
-![Figure 4. Waveform showing the seven segment display being tested](images/display.png)
-Figure 4. Waveform showing the seven segment display being tested
+The screenshot above shows the QuestaSim simulation for the top module. 
 
-Figure 4 shows a screenshot of the QuestaSim simulation for the seven segment module. 
+![Figure 4. Waveform showing the seven segment display being tested](images/display.png){fig-cap="Figure 4. Waveform showing the seven segment display being tested"}
 
-![Figure 5. Waveform showing the counter and led[2]](images/counter.png)
-Figure 5. Waveform showing the counter and led[2]
 
-Figure 4 shows a screenshot of the QuestaSim simulation for the counter module. 
+The screenshot above shows the QuestaSim simulation for the seven segment module. 
+
+![Figure 5. Waveform showing the counter and led[2]](images/counter.png){fig-cap="Figure 5. Waveform showing the counter and led[2]"}
+
+
+The screenshot above shows the QuestaSim simulation for the counter module. 
 
 
 ### Conclusion
