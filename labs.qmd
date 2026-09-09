@@ -6,7 +6,37 @@ This page contains a summary of the labs completed for E155.
 
 ## Lab 1 - Board Assembly and Testing
 
-Description of Lab 1.
+### Overview
+
+For this lab I assembled the E155 board and tested it. After soldering all the components on, I programmed 
+a 7 segment display to show hexadecimal digits taking four switches as binary inputs. Also blinked an LED 
+using the Updunio's internal HSOSC oscillator. 
+
+
+### Design
+
+There were two important considerations for the design of this project. The first was the resistor values to use 
+for the seven segment display. 
+
+
+### Schematics 
+
+
+
+
+### Testing
+
+
+[Figure 1. Waveform showing the top module being tested](images/top_testbench.png)
+Figure 1. Waveform showing the top module being tested
+
+[Figure 2. Waveform showing the seven segment display being tested](images/display.png)
+Figure 2. Waveform showing the seven segment display being tested
+
+[Figure 3. Waveform showing the counter and led[2]](images/counter.png)
+Figure 3. Waveform showing the counter and led[2]
+
+
 
 ## Lab 2 - Multiplexed 7-Segment Display
 
