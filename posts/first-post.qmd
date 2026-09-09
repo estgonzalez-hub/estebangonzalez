@@ -1,0 +1,11 @@
+---
+title: "Hello Quarto"
+description: "I am very excited to be taking MicroPs this semester. It is a challenging course that will improve my technical
+              abilities and time management skills. I am very passionate about this topic and be in a class that I've heard so much about."
+author: "Esteban Gonzalez"
+date: "9/8/24"
+categories:
+  - reflection
+  - labreport
+draft: false
+---

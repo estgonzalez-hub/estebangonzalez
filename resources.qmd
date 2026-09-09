@@ -1,0 +1,7 @@
+---
+title: "Resources"
+---
+
+A collection of resources referenced for labs. 
+
+- [E155 Class Website](https://hmc-e155.github.io/)

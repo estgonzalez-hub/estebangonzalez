@@ -1,0 +1,23 @@
+---
+
+title: "E155 Portfolio"
+imgaes: images/placeholder.jpeg.png
+about:
+    template: jolla
+    links:
+        - icon: linkedin
+          text: Linkedin
+          href: https://www.linkedin.com/in/esteban-gonzalez-981a2a430/ 
+        - icon: github
+          text: Github
+          href: https://github.com/estgonzalez-hub/Micro_Ps 
+        
+        
+
+---
+
+This is a Quarto website.
+
+Hello my name is Esteban Gonzalez
+![](images/placeholder.jpeg.png)
+[Link to Github](https://github.com/estgonzalez-hub/estebangonzalez)
