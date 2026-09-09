@@ -23,14 +23,14 @@ The source code for the project can be found in the associated
 
 ### Technical Documentation
 
-![Block Diagram](images/block_diagram_lab1.png)
+![Block Diagram](images/block_diagram_lab1.jpg)
 Figure 1. Block diagram of Verilog design.
 
 The block diagram in Figure 1 demonstrates the overall architecture of the design. The top level module includes three submodules: the  the high-speed oscillator block (hf_osc), the counter module (blinking_led), and the seven segment display block (seven_segment_display). 
 
 ### Schematic
 
-![Schematic](images/schematic_lab1.png)
+![Schematic](images/schematic_lab1.jpg)
 Figure 2. Schematic of the physical circuit.
 
 The schematic in Figure 2 demonstrates the physical layout of the design. The LEDs from the seven segment display were connected to 150 Ω resistors. 
