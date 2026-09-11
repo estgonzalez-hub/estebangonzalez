@@ -7,57 +7,71 @@
     "text": "A collection of resources referenced for labs.\n\nE155 Class Website"
   },
   {
-    "objectID": "labs.html",
-    "href": "labs.html",
+    "objectID": "Lab3.html",
+    "href": "Lab3.html",
+    "title": "E155 Portfolio",
+    "section": "",
+    "text": "Description of Lab 3."
+  },
+  {
+    "objectID": "Lab3.html#lab-3---keypad-scanner",
+    "href": "Lab3.html#lab-3---keypad-scanner",
+    "title": "E155 Portfolio",
+    "section": "",
+    "text": "Description of Lab 3."
+  },
+  {
+    "objectID": "Lab1.html",
+    "href": "Lab1.html",
     "title": "Labs",
     "section": "",
     "text": "This page contains a summary of the labs completed for E155."
   },
   {
-    "objectID": "labs.html#lab-1---board-assembly-and-testing",
-    "href": "labs.html#lab-1---board-assembly-and-testing",
+    "objectID": "Lab1.html#lab-1---board-assembly-and-testing",
+    "href": "Lab1.html#lab-1---board-assembly-and-testing",
     "title": "Labs",
     "section": "Lab 1 - Board Assembly and Testing",
-    "text": "Lab 1 - Board Assembly and Testing\n\nIntroduction\nIn this lab, the E155 board was assembled and tested it. After soldering all the components on, the FPGA was programmed to show hexadecimal digits on a 7 segment LED display. It takes four switches as binary inputs and outputs the corresponding hexadecimal digit. Additionally, an LED was blinked at 2.4 Hz using the ’s internal HSOSC oscillator and lowering it using a counter\n\n\nDesign and Testing Methodology\nThe high-speed oscillator (HSOSC) from the iCE40 UltraPlus primitive library was used to generate a clock signal at 24 MHz. A counter was then used to divide the clock signal down so the LED could blink at 2.4 Hz and make it easier to visualize. For the seven segment display, a case statement was used to assign all the inputs from the switches to the corresponding hexadecimal digit. The pins were carefully assigned from the FPGA to ensure they drove the intended section of the of seven segment display.\nThe design was developed using three modules. A top level module, a module for the counter, and a module for the seven segment display.\nThe source code for the project can be found in the associated Github repository\n\n\nTechnical Documentation\n\n\n\nBlock Diagram\n\n\nThe block diagram in Figure 1 demonstrates the overall architecture of the design. The top level module includes three submodules: the the high-speed oscillator block (hf_osc), the counter module (blinking_led), and the seven segment display block (seven_segment_display).\n\n\nSchematic\n\n\n\nSchematic\n\n\nThe schematic in Figure 2 demonstrates the physical layout of the design. The LEDs from the seven segment display were connected to 150 Ω resistors.\n\n\nResults and Discussion\nAll the prescribed tasks were accomplished. The seven segment display worked as expected, correctly shwoing the hexadecimal digits from 0 all the way to F. The LED blinked at 2.4 Hz showing it was designed correctly.\n\n\nTestbench Simulation\nThe design met all intended design objectives.\n\n\n\nFigure 3. Waveform showing the top module being tested\n\n\nThe screenshot above shows the QuestaSim simulation for the top module.\n\n\n\nFigure 4. Waveform showing the seven segment display being tested\n\n\nThe screenshot above shows the QuestaSim simulation for the seven segment module.\n\n\n\nFigure 5. Waveform showing the counter and led[2]\n\n\nThe screenshot above shows the QuestaSim simulation for the counter module.\n\n\nConclusion\nThe design successfully blinked an LED at 2.4 Hz and drove a seven segment LED display using switches as inputs. The intenral high-speed oscillator was used to generate the clock signal for the counter. I spent about 20 hours on this lab.\n\n\nAI Prototype Summary\nAn LLM can be a helpful tool to write code. With a relatively short prompt, “Write SystemVerilog HDL to leverage the internal high speed oscillator in the Lattice UP5K FPGA and blink an LED at 2 Hz. Take full advantage of SystemVerilog syntax, for example, using logic instead of wire and reg.” The LLM was able to generate a file that was ready to be compiled. I tried to compile the file but ran into errors. I then had to paste the error messages a few more times before it was able to compile. I noticed that the AI was good about writing comments and describing what each code snippet should do. It wasn’t the best at writing code from scratch, and instead was more useful for debugging. It quickly caught syntax errors and identified issues when prompted. A useful way to levarage AI when making a design in Radiant is to use it as a debugging tool. It can explain error and warining messages and provide more context as to what Radiant is trying to tell you."
+    "text": "Lab 1 - Board Assembly and Testing\n\nIntroduction\nIn this lab, the E155 board was assembled and tested it. After soldering all the components on, the FPGA was programmed to show hexadecimal digits on a 7 segment LED display. It takes four switches as binary inputs and outputs the corresponding hexadecimal digit. Additionally, an LED was blinked at 2.4 Hz using the ’s internal HSOSC and lowering it using a counter. To lower the HSOSC the following calculations were used. 48 MHz/ (2 * 10 MHz)\n\n\nDesign and Testing Methodology\nThe high-speed oscillator (HSOSC) from the iCE40 UltraPlus primitive library was used to generate a clock signal at 24 MHz. A counter was then used to divide the clock signal down so the LED could blink at 2.4 Hz and make it easier to visualize. For the seven segment display, a case statement was used to assign all the inputs from the switches to the corresponding hexadecimal digit. The pins were carefully assigned from the FPGA to ensure they drove the intended section of the of seven segment display.\nThe design was developed using three modules. A top level module, a module for the counter, and a module for the seven segment display.\nThe source code for the project can be found in the associated Github repository\n\n\nTechnical Documentation\n\n\n\nBlock Diagram\n\n\nThe block diagram in Figure 1 demonstrates the overall architecture of the design. The top level module includes three submodules: the the high-speed oscillator block (hf_osc), the counter module (blinking_led), and the seven segment display block (seven_segment_display).\n\n\nSchematic\n\n\n\nSchematic\n\n\nThe schematic in Figure 2 demonstrates the physical layout of the design. The LEDs from the seven segment display were connected to 150 Ω resistors. This was calculated using R = V/I. The voltage was found by subtracting the forward voltage of the LED from the power voltage and dividing by our desired current. (3.3V - 2.1 V) / 10 mA. This gave 120 Ω, so the standard resistor of 150 Ω was chosen.\n\n\nResults and Discussion\nAll the prescribed tasks were accomplished. The seven segment display worked as expected, correctly shwoing the hexadecimal digits from 0 all the way to F. The LED blinked at 2.4 Hz showing it was designed correctly.\n\n\nTestbench Simulation\nThe design met all intended design objectives.\n\n\n\nFigure 3. Waveform showing the top module being tested\n\n\nThe screenshot above shows the QuestaSim simulation for the top module.\n\n\n\nFigure 4. Waveform showing the seven segment display being tested\n\n\nThe screenshot above shows the QuestaSim simulation for the seven segment module.\n\n\n\nFigure 5. Waveform showing the counter and led[2]\n\n\nThe screenshot above shows the QuestaSim simulation for the counter module.\n\n\nConclusion\nThe design successfully blinked an LED at 2.4 Hz and drove a seven segment LED display using switches as inputs. The intenral high-speed oscillator was used to generate the clock signal for the counter. I spent about 20 hours on this lab.\n\n\nAI Prototype Summary\nAn LLM can be a helpful tool to write code. With a relatively short prompt, “Write SystemVerilog HDL to leverage the internal high speed oscillator in the Lattice UP5K FPGA and blink an LED at 2 Hz. Take full advantage of SystemVerilog syntax, for example, using logic instead of wire and reg.” The LLM was able to generate a file that was ready to be compiled. I tried to compile the file but ran into errors. I then had to paste the error messages a few more times before it was able to compile. I noticed that the AI was good about writing comments and describing what each code snippet should do. It wasn’t the best at writing code from scratch, and instead was more useful for debugging. It quickly caught syntax errors and identified issues when prompted. A useful way to levarage AI when making a design in Radiant is to use it as a debugging tool. It can explain error and warining messages and provide more context as to what Radiant is trying to tell you."
   },
   {
-    "objectID": "labs.html#lab-2---multiplexed-7-segment-display",
-    "href": "labs.html#lab-2---multiplexed-7-segment-display",
+    "objectID": "Lab1.html#lab-2---multiplexed-7-segment-display",
+    "href": "Lab1.html#lab-2---multiplexed-7-segment-display",
     "title": "Labs",
     "section": "Lab 2 - Multiplexed 7-Segment Display",
     "text": "Lab 2 - Multiplexed 7-Segment Display\nDescription of Lab 2."
   },
   {
-    "objectID": "labs.html#lab-3---keypad-scanner",
-    "href": "labs.html#lab-3---keypad-scanner",
+    "objectID": "Lab1.html#lab-3---keypad-scanner",
+    "href": "Lab1.html#lab-3---keypad-scanner",
     "title": "Labs",
     "section": "Lab 3 - Keypad Scanner",
     "text": "Lab 3 - Keypad Scanner\nDescription of Lab 3."
   },
   {
-    "objectID": "labs.html#lab-4---digital-audio",
-    "href": "labs.html#lab-4---digital-audio",
+    "objectID": "Lab1.html#lab-4---digital-audio",
+    "href": "Lab1.html#lab-4---digital-audio",
     "title": "Labs",
     "section": "Lab 4 - Digital Audio",
     "text": "Lab 4 - Digital Audio\nDescription of Lab 4."
   },
   {
-    "objectID": "labs.html#lab-5---interrupts",
-    "href": "labs.html#lab-5---interrupts",
+    "objectID": "Lab1.html#lab-5---interrupts",
+    "href": "Lab1.html#lab-5---interrupts",
     "title": "Labs",
     "section": "Lab 5 - Interrupts",
     "text": "Lab 5 - Interrupts\nDescription of Lab 5."
   },
   {
-    "objectID": "labs.html#lab-6---the-internet-of-things-and-serial-peripheral-interface",
-    "href": "labs.html#lab-6---the-internet-of-things-and-serial-peripheral-interface",
+    "objectID": "Lab1.html#lab-6---the-internet-of-things-and-serial-peripheral-interface",
+    "href": "Lab1.html#lab-6---the-internet-of-things-and-serial-peripheral-interface",
     "title": "Labs",
     "section": "Lab 6 - The Internet of Things and Serial Peripheral Interface",
     "text": "Lab 6 - The Internet of Things and Serial Peripheral Interface\nDescription of Lab 6."
   },
   {
-    "objectID": "labs.html#lab-7---the-advanced-encryption-standard-aes",
-    "href": "labs.html#lab-7---the-advanced-encryption-standard-aes",
+    "objectID": "Lab1.html#lab-7---the-advanced-encryption-standard-aes",
+    "href": "Lab1.html#lab-7---the-advanced-encryption-standard-aes",
     "title": "Labs",
     "section": "Lab 7 - The Advanced Encryption Standard (AES)",
     "text": "Lab 7 - The Advanced Encryption Standard (AES)\nDescription of Lab 7."
@@ -82,5 +96,19 @@
     "title": "E155 Portfolio",
     "section": "",
     "text": "Hello my name is Esteban Gonzalez. I am an Engineering student at Harvey Mudd College."
+  },
+  {
+    "objectID": "Lab2.html",
+    "href": "Lab2.html",
+    "title": "E155 Portfolio",
+    "section": "",
+    "text": "Description of Lab 2."
+  },
+  {
+    "objectID": "Lab2.html#lab-2---multiplexed-7-segment-display",
+    "href": "Lab2.html#lab-2---multiplexed-7-segment-display",
+    "title": "E155 Portfolio",
+    "section": "",
+    "text": "Description of Lab 2."
   }
 ]

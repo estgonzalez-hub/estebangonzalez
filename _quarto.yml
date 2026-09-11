@@ -8,12 +8,27 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: labs.qmd
-        text: Labs
       - href: resources.qmd
         text: Resources
       - href: blog.qmd
         text: Blog
+      - text: "Labs"
+        menu:
+          - text: "Lab 1"
+            href: Lab1.qmd
+          - text: "Lab 2"
+            href: Lab2.qmd
+          - text: "Lab 3"
+            href: Lab3.qmd
+          - text: "Lab 4"
+            href: Lab4.qmd
+          - text: "Lab 5"
+            href: Lab5.qmd
+          - text: "Lab 6"
+            href: Lab6.qmd
+          - text: "Lab 7"
+            href: Lab7.qmd
+
 
 format:
   html:

@@ -9,7 +9,7 @@ This page contains a summary of the labs completed for E155.
 ### Introduction
 
 In this lab, the E155 board was assembled and tested it. After soldering all the components on, the FPGA was programmed 
-to show hexadecimal digits on a 7 segment LED display. It takes four switches as binary inputs and outputs the corresponding hexadecimal digit. Additionally,  an LED was blinked at 2.4 Hz using the 's internal HSOSC oscillator and lowering it using a counter 
+to show hexadecimal digits on a 7 segment LED display. It takes four switches as binary inputs and outputs the corresponding hexadecimal digit. Additionally,  an LED was blinked at 2.4 Hz using the 's internal HSOSC and lowering it using a counter. To lower the HSOSC the following calculations were used. 48 MHz/ (2 * 10 MHz)
 
 ### Design and Testing Methodology
 
@@ -33,7 +33,7 @@ The block diagram in Figure 1 demonstrates the overall architecture of the desig
 ![Schematic](images/schematic_lab1.jpg){fig-cap="Figure 2. Schematic of the physical circuit."}
 
 
-The schematic in Figure 2 demonstrates the physical layout of the design. The LEDs from the seven segment display were connected to 150 Ω resistors. 
+The schematic in Figure 2 demonstrates the physical layout of the design. The LEDs from the seven segment display were connected to 150 Ω resistors. This was calculated using R = V/I. The voltage was found by subtracting the forward voltage of the LED from the power voltage and dividing by our desired current. (3.3V - 2.1 V) / 10 mA. This gave 120 Ω, so the standard resistor of 150 Ω was chosen.
 
 
 ### Results and Discussion 
