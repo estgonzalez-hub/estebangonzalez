@@ -73,26 +73,11 @@ An LLM can be a helpful tool to write code. With a relatively short prompt, "Wri
 
 
 
-## Lab 2 - Multiplexed 7-Segment Display
 
-Description of Lab 2.
 
-## Lab 3 - Keypad Scanner
 
-Description of Lab 3.
 
-## Lab 4 - Digital Audio
 
-Description of Lab 4.
 
-## Lab 5 - Interrupts
 
-Description of Lab 5.
 
-## Lab 6 - The Internet of Things and Serial Peripheral Interface
-
-Description of Lab 6.
-
-## Lab 7 - The Advanced Encryption Standard (AES)
-
-Description of Lab 7.

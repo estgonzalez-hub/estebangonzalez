@@ -13,5 +13,5 @@ about:
 ---
 
 
-Hello my name is Esteban Gonzalez. I am an Engineering student at Harvey Mudd College.
+Hello my name is Esteban Gonzalez. I am a junior Engineering student at Harvey Mudd College. I enjoy learning about  Electrical concepts, from microprocessers to Radio Frequency circuitry. I enjoy going on runs and watching movies. 
 
