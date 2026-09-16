@@ -30,7 +30,7 @@ The block diagram in Figure 1 demonstrates the overall architecture of the desig
 ### Schematic
 
 ![Schematic](images/seven_schematic.jpeg)
-![Schematic](images/switch_schematic.jpeg){fig-cap="Figure 2. Schematic of the physical dual seven segment along with one of the switches for a digit circuit."}
+![Schematic](images/switch_schematic.png){fig-cap="Figure 2. Schematic of the physical dual seven segment along with one of the switches for a digit circuit."}
 
 
 The schematic in Figure 2 demonstrates the physical layout of the design. The LEDs from the seven segment display were connected to 150 Ω resistors. This was calculated using R = V/I. The voltage was found by subtracting the forward voltage of the LED from the power voltage and dividing by our desired current. (3.3V - 2.1 V) / 10 mA. This gave 120 Ω, so the standard resistor of 150 Ω was chosen.
