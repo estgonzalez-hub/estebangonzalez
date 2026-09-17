@@ -30,7 +30,7 @@ The block diagram in Figure 1 demonstrates the overall architecture of the desig
 
 ### Schematic
 
-![Schematic](images/schematics_lab2.jpeg)
+![Schematic](images/schematics_lab2.jpg)
 ![Schematic](images/switch_schematic.png){fig-cap="Figure 2. Schematic of the physical dual seven segment along with one of the switches for a digit circuit. Also shows keypad schematic."}
 
 
