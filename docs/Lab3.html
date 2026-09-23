@@ -163,7 +163,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#design-and-testing-methodology" id="toc-design-and-testing-methodology" class="nav-link" data-scroll-target="#design-and-testing-methodology">Design and Testing Methodology</a></li>
   <li><a href="#technical-documentiation" id="toc-technical-documentiation" class="nav-link" data-scroll-target="#technical-documentiation">Technical Documentiation</a></li>
-  <li><a href="#block-diagram-and-schematics" id="toc-block-diagram-and-schematics" class="nav-link" data-scroll-target="#block-diagram-and-schematics">Block Diagram and Schematics</a></li>
+  <li><a href="#block-diagram-schematics-and-state-diagrams" id="toc-block-diagram-schematics-and-state-diagrams" class="nav-link" data-scroll-target="#block-diagram-schematics-and-state-diagrams">Block Diagram, Schematics, and state diagrams</a></li>
   <li><a href="#schematic" id="toc-schematic" class="nav-link" data-scroll-target="#schematic">Schematic</a></li>
   <li><a href="#testbench-simulation" id="toc-testbench-simulation" class="nav-link" data-scroll-target="#testbench-simulation">Testbench Simulation</a></li>
   <li><a href="#results-and-discussion" id="toc-results-and-discussion" class="nav-link" data-scroll-target="#results-and-discussion">Results and Discussion</a></li>
@@ -194,19 +194,42 @@ ul.task-list li input[type="checkbox"] {
 <p>The design was developed using eight modules. A top module, a counter module, a seven segment display module, a scanner module, a debounce module, a key press module, a synchronizer module, and a number assign module.</p>
 <p>The source code for the project can be found in the associated <a href="https://github.com/estgonzalez-hub/Micro_Ps/tree/main/e155_Lab3">Github repository</a></p>
 </section>
-<section id="block-diagram-and-schematics" class="level3">
-<h3 class="anchored" data-anchor-id="block-diagram-and-schematics">Block Diagram and Schematics</h3>
+<section id="block-diagram-schematics-and-state-diagrams" class="level3">
+<h3 class="anchored" data-anchor-id="block-diagram-schematics-and-state-diagrams">Block Diagram, Schematics, and state diagrams</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/block_diagramlab2.jpeg" class="img-fluid figure-img"></p>
+<p><img src="images/top_blockdiagram_lab3.jpg" class="img-fluid figure-img"></p>
 <figcaption>Block Diagram</figcaption>
 </figure>
 </div>
 <p>The block diagram in Figure 1 demonstrates the overall architecture of the design. The top level module includes seven submodules.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/debounce_fsm.jpg" class="img-fluid figure-img"></p>
+<figcaption>FSM</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/key_press_fsm.jpg" class="img-fluid figure-img"></p>
+<figcaption>FSM</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/state_truthtables.jpg" class="img-fluid figure-img"></p>
+<figcaption>FSM</figcaption>
+</figure>
+</div>
 </section>
 <section id="schematic" class="level3">
 <h3 class="anchored" data-anchor-id="schematic">Schematic</h3>
-<p><img src="images/schematics_lab2.jpg" class="img-fluid" alt="Schematic"> <img src="images/switch_schematic.png" class="img-fluid" data-fig-cap="Figure 2. Schematic of the physical dual seven segment along with the physical keypad." alt="Schematic"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/lab3_schematic.jpg" class="img-fluid figure-img"></p>
+<figcaption>Schematic</figcaption>
+</figure>
+</div>
 <p>The schematic in Figure 2 demonstrates the physical layout of the design. The LEDs from the seven segment display were connected to 150 Ω resistors. This was calculated using R = V/I. The voltage was found by subtracting the forward voltage of the LED from the power voltage and dividing by our desired current. (3.3V - 2.1 V) / 10 mA. This gave 120 Ω, so the standard resistor of 150 Ω was chosen. The schematic also demonstrates the physical layout of the keypad.</p>
 </section>
 <section id="testbench-simulation" class="level3">

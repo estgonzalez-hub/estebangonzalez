@@ -14,17 +14,22 @@ The source code for the project can be found in the associated
 [Github repository](https://github.com/estgonzalez-hub/Micro_Ps/tree/main/e155_Lab3)
 
 
-### Block Diagram and Schematics
+### Block Diagram, Schematics, and state diagrams
 
-![Block Diagram](images/block_diagramlab2.jpeg){fig-cap="Figure 1. Block diagram of Verilog design."}
+![Block Diagram](images/top_blockdiagram_lab3.jpg){fig-cap="Figure 1. Block diagram of Verilog design."}
 
 
 The block diagram in Figure 1 demonstrates the overall architecture of the design. The top level module includes seven submodules.
 
+![FSM](images/debounce_fsm.jpg){fig-cap="Figure 2. FSM for debounce module"}
+
+![FSM](images/key_press_fsm.jpg){fig-cap="Figure 3. FSM for key_press module"}
+
+![FSM](images/state_truthtables.jpg){fig-cap="Figure 4.Truth tables for FSMs above."}
+
 ### Schematic
 
-![Schematic](images/schematics_lab2.jpg)
-![Schematic](images/switch_schematic.png){fig-cap="Figure 2. Schematic of the physical dual seven segment along with the physical keypad."}
+![Schematic](images/lab3_schematic.jpg){fig-cap="Figure 2. Schematic of the physical dual seven segment along with the physical keypad."}
 
 
 The schematic in Figure 2 demonstrates the physical layout of the design. The LEDs from the seven segment display were connected to 150 Ω resistors. This was calculated using R = V/I. The voltage was found by subtracting the forward voltage of the LED from the power voltage and dividing by our desired current. (3.3V - 2.1 V) / 10 mA. This gave 120 Ω, so the standard resistor of 150 Ω was chosen. The schematic also demonstrates the physical layout of the keypad. 
