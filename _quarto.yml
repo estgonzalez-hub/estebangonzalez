@@ -3,11 +3,13 @@ project:
   output-dir: docs
 
 website:
-  title: "E155 Portfolio"
+  title: "Esteban Gonzalez"
   navbar:
     left:
       - href: index.qmd
         text: Home
+      - href: projects.qmd
+        text: Projects  
       - text: "Labs"
         menu:
           - text: "Lab 1"
@@ -33,7 +35,7 @@ website:
 format:
   html:
     theme:
-      - lux
+      - flatly
       - brand
     css: styles.css
     toc: true
