@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>projects – Esteban Gonzalez</title>
+<title>Engineering Projects – Esteban Gonzalez</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -78,11 +78,40 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -328,16 +357,76 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Engineering Projects</h1>
+<p class="subtitle lead">A showcase of my work in RF engineering, embedded systems, autonomous hardware, and sensor design.</p>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
+</header>
+
+
+<div class="grid">
+<!-- PROJECT 1: Aerospace Corp & FAA CRPA -->
+<div class="g-col-12 g-col-md-6">
+<div class="card h-100 shadow-sm">
+<p><img src="projects/images/crpa-thumb.jpg" class="card-img-top img-fluid" alt="CRPA Testing Setup"> ::: {.card-body} ### CRPA Antenna Characterization <strong>SDR Lead | Harvey Mudd Collge</strong><br>
+<em>August 2026 – Present (Team of 7)</em></p>
+<p>Leading Software Defined Radio (SDR) signal processing to test and characterize a Controlled Reception Pattern Antenna (CRPA) for anti-jamming performance.</p>
+<ul>
+<li><strong>Key Focus:</strong> Return loss, mutual coupling, element/array radiation patterns, axial ratios, null testing, Jamming-to-Noise (<span class="math inline">\(J/N\)</span>) ratio, and beam steering.</li>
+<li><strong>Tools &amp; Tech:</strong> SDRs, Vector Network Analyzer (VNA), MATLAB/Python, RF Testing</li>
+</ul>
+<p><a href="projects/crpa-characterization.qmd" class="btn btn-outline-primary btn-sm mt-2" role="button">View Detailed Write-Up →</a></p>
+</div>
+</div>
+</div>
+<!-- PROJECT 2: Autonomous Submersible -->
+<div class="g-col-12 g-col-md-6">
+<div class="card h-100 shadow-sm">
+<div class="card-body">
+<p><img src="projects/images/robot-thumb.jpg" class="card-img-top img-fluid" alt="Autonomous Diving Robot"> ### Autonomous Underwater Robot <strong>Hardware &amp; Systems Engineer</strong><br>
+<em>Team of 4</em></p>
+<p>Designed and fabricated an autonomous robot capable of both surface navigation and controlled underwater diving to perform bathymetric floor mapping and environmental sampling.</p>
+<ul>
+<li><strong>Key Focus:</strong> Sensor integration (sonar depth measurement, pressure, temperature), ballast/surface motion control, and 3D floor contour generation.</li>
+<li><strong>Tools &amp; Tech:</strong> Sonar Processing, Microcontrollers, 3D Mapping, Sensor Fusion</li>
+</ul>
+<p><a href="projects/autonomous-submersible.qmd" class="btn btn-outline-primary btn-sm mt-2" role="button">View Detailed Write-Up →</a></p>
+</div>
+</div>
+</div>
+<!-- PROJECT 3: Smart High-CADR Air Purifier -->
+<div class="g-col-12 g-col-md-6">
+<div class="card h-100 shadow-sm">
+<p><img src="projects/images/filter-thumb.jpg" class="card-img-top img-fluid" alt="Smart Air Purifier Prototype"> ::: {.card-body} ### Smart High-CADR Indoor Air Purifier <strong>Individual Summer Researcher</strong><br>
+<em>Independent Summer Research</em></p>
+<p>Engineered a custom DIY indoor air purification system that outperforms commercial off-the-shelf units in Clean Air Delivery Rate (CADR) at a significantly lower cost.</p>
+<ul>
+<li><strong>Key Focus:</strong> Fluid flow optimization, cost reduction, and ongoing phase-2 integration of a particulate matter (PM2.5) sensor and microcontroller for automated fan speeds.</li>
+<li><strong>Tools &amp; Tech:</strong> PM Sensors, Microcontrollers, System Prototyping, C/C++</li>
+</ul>
+<p><a href="projects/smart-air-purifier.qmd" class="btn btn-outline-primary btn-sm mt-2" role="button">View Detailed Write-Up →</a></p>
+</div>
+</div>
+<p>:::</p>
+<p>:::</p>
 
 
 

@@ -1,0 +1,66 @@
+---
+title: "Engineering Projects"
+subtitle: "A showcase of my work in RF engineering, embedded systems, autonomous hardware, and sensor design."
+toc: false
+---
+
+::: {.grid}
+
+<!-- PROJECT 1: Aerospace Corp & FAA CRPA -->
+::: {.g-col-12 .g-col-md-6}
+::: {.card .h-100 .shadow-sm}
+![](projects/images/crpa-thumb.jpg){.card-img-top alt="CRPA Testing Setup"}
+::: {.card-body}
+###  CRPA Antenna Characterization
+**SDR Lead | Harvey Mudd Collge**  
+*August 2026 – Present (Team of 7)*
+
+Leading Software Defined Radio (SDR) signal processing to test and characterize a Controlled Reception Pattern Antenna (CRPA) for anti-jamming performance. 
+
+* **Key Focus:** Return loss, mutual coupling, element/array radiation patterns, axial ratios, null testing, Jamming-to-Noise ($J/N$) ratio, and beam steering.
+* **Tools & Tech:** SDRs, Vector Network Analyzer (VNA), MATLAB/Python, RF Testing
+
+[View Detailed Write-Up →](projects/crpa-characterization.qmd){.btn .btn-outline-primary .btn-sm role="button" .mt-2}
+:::
+:::
+:::
+
+<!-- PROJECT 2: Autonomous Submersible -->
+::: {.g-col-12 .g-col-md-6}
+::: {.card .h-100 .shadow-sm}
+::: {.card-body}
+![](projects/images/robot-thumb.jpg){.card-img-top alt="Autonomous Diving Robot"}
+###  Autonomous Underwater Robot
+**Hardware & Systems Engineer**  
+*Team of 4*
+
+Designed and fabricated an autonomous robot capable of both surface navigation and controlled underwater diving to perform bathymetric floor mapping and environmental sampling.
+
+* **Key Focus:** Sensor integration (sonar depth measurement, pressure, temperature), ballast/surface motion control, and 3D floor contour generation.
+* **Tools & Tech:** Sonar Processing, Microcontrollers, 3D Mapping, Sensor Fusion
+
+[View Detailed Write-Up →](projects/autonomous-submersible.qmd){.btn .btn-outline-primary .btn-sm role="button" .mt-2}
+:::
+:::
+:::
+
+<!-- PROJECT 3: Smart High-CADR Air Purifier -->
+::: {.g-col-12 .g-col-md-6}
+::: {.card .h-100 .shadow-sm}
+![](projects/images/filter-thumb.jpg){.card-img-top alt="Smart Air Purifier Prototype"}
+::: {.card-body}
+###  Smart High-CADR Indoor Air Purifier
+**Individual Summer Researcher**  
+*Independent Summer Research*
+
+Engineered a custom DIY indoor air purification system that outperforms commercial off-the-shelf units in Clean Air Delivery Rate (CADR) at a significantly lower cost.
+
+* **Key Focus:** Fluid flow optimization, cost reduction, and ongoing phase-2 integration of a particulate matter (PM2.5) sensor and microcontroller for automated fan speeds.
+* **Tools & Tech:** PM Sensors, Microcontrollers, System Prototyping, C/C++
+
+[View Detailed Write-Up →](projects/smart-air-purifier.qmd){.btn .btn-outline-primary .btn-sm role="button" .mt-2}
+:::
+:::
+:::
+
+:::
