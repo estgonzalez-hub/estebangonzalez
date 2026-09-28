@@ -10,22 +10,24 @@ website:
         text: Home
       - href: projects.qmd
         text: Projects  
-      - text: "Labs"
+      - text: "E155 Labs"
         menu:
-          - text: "Lab 1"
+          - text: "Lab 1: FPGA & SystemVerilog"
             href: Lab1.qmd
-          - text: "Lab 2"
+          - text: "Lab 2: Microcontroller SPI Interface"
             href: Lab2.qmd
-          - text: "Lab 3"
+          - text: "Lab 3: Keypad & LED Driver"
             href: Lab3.qmd
-          - text: "Lab 4"
+          - text: "Lab 4: Audio DAC & PWM"
             href: Lab4.qmd
-          - text: "Lab 5"
+          - text: "Lab 5: Digital Signal Processing"
             href: Lab5.qmd
-          - text: "Lab 6"
+          - text: "Lab 6: I2C Sensor Integration"
             href: Lab6.qmd
-          - text: "Lab 7"
+          - text: "Lab 7: Autonomous MCU System"
             href: Lab7.qmd
+      - href: Esteban_Gonzalez_Resume.pdf
+        text: Resume
       - href: resources.qmd
         text: Resources
       - href: blog.qmd
@@ -35,8 +37,8 @@ website:
 format:
   html:
     theme:
-      - cosmo
-      - brand
+      light: cosmo
+      dark: cyborg
     css: styles.css
     toc: true
 

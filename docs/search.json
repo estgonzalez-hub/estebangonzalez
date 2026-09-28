@@ -51,9 +51,16 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "E155 Portfolio",
+    "title": "Esteban Gonzalez",
     "section": "",
-    "text": "Hello my name is Esteban Gonzalez. I am a junior Engineering student at Harvey Mudd College. I enjoy learning about Electrical concepts, from microprocessers to Radio Frequency circuitry. I enjoy going on runs and watching movies."
+    "text": "I am a Junior Engineering student at Harvey Mudd College passionate about electrical engineering and hardware design. My technical interests range from digital system design with microprocessors and FPGAs to Radio Frequency (RF) circuitry and signal processing.\nOutside the lab, you can find me running around Southern California or catching up on movies."
+  },
+  {
+    "objectID": "index.html#technical-focus-portfolio-highlights",
+    "href": "index.html#technical-focus-portfolio-highlights",
+    "title": "Esteban Gonzalez",
+    "section": "🛠️ Technical Focus & Portfolio Highlights",
+    "text": "🛠️ Technical Focus & Portfolio Highlights\n\n\n⚡ Microprocessor Systems (E155)\nHands-on labs and system design covering SystemVerilog, FPGA configuration, ARM Cortex-M microcontrollers, SPI/I2C protocols, and custom peripheral interfaces. Explore E155 Labs →\n\n\n🛰️ Engineering Projects\nA showcase of hardware design, RF circuitry experiments, breadboard prototypes, and team engineering coursework. View All Projects →"
   },
   {
     "objectID": "about.html",
