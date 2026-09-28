@@ -53,14 +53,14 @@
     "href": "index.html",
     "title": "Esteban Gonzalez",
     "section": "",
-    "text": "I am a Junior Engineering student at Harvey Mudd College passionate about electrical engineering and hardware design. My technical interests range from digital system design with microprocessors and FPGAs to Radio Frequency (RF) circuitry and signal processing.\nOutside the lab, you can find me running around Southern California or catching up on movies."
+    "text": "I am a Junior Engineering student at Harvey Mudd College passionate about electrical engineering and hardware design. My technical interests range from digital system design with microprocessors and FPGAs to Radio Frequency circuitry and signal processing. Outside the lab, you can find me running or watching movies."
   },
   {
-    "objectID": "index.html#technical-focus-portfolio-highlights",
-    "href": "index.html#technical-focus-portfolio-highlights",
+    "objectID": "index.html#featured-work",
+    "href": "index.html#featured-work",
     "title": "Esteban Gonzalez",
-    "section": "🛠️ Technical Focus & Portfolio Highlights",
-    "text": "🛠️ Technical Focus & Portfolio Highlights\n\n\n⚡ Microprocessor Systems (E155)\nHands-on labs and system design covering SystemVerilog, FPGA configuration, ARM Cortex-M microcontrollers, SPI/I2C protocols, and custom peripheral interfaces. Explore E155 Labs →\n\n\n🛰️ Engineering Projects\nA showcase of hardware design, RF circuitry experiments, breadboard prototypes, and team engineering coursework. View All Projects →"
+    "section": "Featured Work",
+    "text": "Featured Work\n\nMicroprocessor System Design (E155): 7 custom FPGA & ARM Cortex-M hardware labs featuring SystemVerilog, SPI/I2C, and custom peripherals. View Labs →\nRF & Hardware Projects: Personal and course projects covering schematic design, signal processing, and hardware prototyping. View Projects →"
   },
   {
     "objectID": "about.html",
