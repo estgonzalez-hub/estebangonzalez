@@ -14,19 +14,25 @@ The source code for the project can be found in the associated
 
 ### Calculations
 The minimum duration of a note was calculated the following way:
+
 $min = 80MHz / (80)(1000) = 1000 Hz = 1ms$
 
 The maximum duration of a note was calculated the following way:
+
 $max = uint32 ms = 4,294,967,295 ms = 49.71 days$
 
 The maximum frequency of a note was calculated the following way:
+
 $max = 80MHz / (1)(2) = 40 MHz$
+
 In reality, the human ear can't hear such a high frequency and there is limitations to hardware that make the maximum frequency lower. 
 
 The minimum frequency was calculated the following way: 
+
 $min = 80MHz / (65536)(65536) = 10.0186 Hz$
 
 The calculations for all the notes of Fur Elise is below: 
+
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyViy7JWPQBBZ94MI-grA6d8Q5XPr4eMw4vzxMXkO0Kxr3c2jL587PqJWSTTV62l4VDhm6-9Res4NC/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 
 Checking just 220 Hz and 1000 Hz is not enough to gaurantee all the notes of Fur Elise fall within 1% error. This is because the notes could be continous, which would lead to some errors.
