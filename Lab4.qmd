@@ -29,20 +29,20 @@ In reality, the human ear can't hear such a high frequency and there is limitati
 
 The minimum frequency was calculated the following way: 
 
-$min = 80MHz / (65536)(65536) = 10.0186 Hz$
+$min = 80MHz / (65536)(65536) = 0.0186 Hz$
 
 The calculations for all the notes of Fur Elise is below: 
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyViy7JWPQBBZ94MI-grA6d8Q5XPr4eMw4vzxMXkO0Kxr3c2jL587PqJWSTTV62l4VDhm6-9Res4NC/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+![Calculations](images/Fur_Elise_calc.png){fig-cap="Figure 1. Calculations showing all the Fur Elise notes are played with less than 1% error."}
 
-Checking just 220 Hz and 1000 Hz is not enough to gaurantee all the notes of Fur Elise fall within 1% error. This is because the notes could be continous, which would lead to some errors.
+Checking just 220 Hz and 1000 Hz is not enough to gaurantee all the notes of Fur Elise fall within 1% error. This is because the notes could be noninteger values, which would lead to some errors due to rounding.
 
 ### Schematic
 
-![Schematic](images/schematic_Lab4.jpg){fig-cap="Figure 1. Schematic of the physical audio amplifier and speaker circuit."}
+![Schematic](images/schematic_Lab4.jpg){fig-cap="Figure 2. Schematic of the physical audio amplifier and speaker circuit."}
 
 
-The schematic in Figure 1 demonstrates the physical layout of the design. The pin was connected to a potentiameter. This allowed the volume of the speaker to be adjusted. The aplifier had a gain of 20, and allowed the music notes to be played at a suitable noise level. 
+The schematic in Figure 2 demonstrates the physical layout of the design. The pin was connected to a potentiameter. This allowed the volume of the speaker to be adjusted. The aplifier had a gain of 20, and allowed the music notes to be played at a suitable noise level. 
 
 ### Conclusion
 

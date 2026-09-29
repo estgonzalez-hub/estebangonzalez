@@ -402,11 +402,15 @@ window.Quarto = {
 <p><span class="math inline">\(max = 80MHz / (1)(2) = 40 MHz\)</span></p>
 <p>In reality, the human ear can’t hear such a high frequency and there is limitations to hardware that make the maximum frequency lower.</p>
 <p>The minimum frequency was calculated the following way:</p>
-<p><span class="math inline">\(min = 80MHz / (65536)(65536) = 10.0186 Hz\)</span></p>
+<p><span class="math inline">\(min = 80MHz / (65536)(65536) = 0.0186 Hz\)</span></p>
 <p>The calculations for all the notes of Fur Elise is below:</p>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyViy7JWPQBBZ94MI-grA6d8Q5XPr4eMw4vzxMXkO0Kxr3c2jL587PqJWSTTV62l4VDhm6-9Res4NC/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false">
-</iframe>
-<p>Checking just 220 Hz and 1000 Hz is not enough to gaurantee all the notes of Fur Elise fall within 1% error. This is because the notes could be continous, which would lead to some errors.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Fur_Elise_calc.png" class="img-fluid figure-img"></p>
+<figcaption>Calculations</figcaption>
+</figure>
+</div>
+<p>Checking just 220 Hz and 1000 Hz is not enough to gaurantee all the notes of Fur Elise fall within 1% error. This is because the notes could be noninteger values, which would lead to some errors due to rounding.</p>
 </section>
 <section id="schematic" class="level3">
 <h3 class="anchored" data-anchor-id="schematic">Schematic</h3>
@@ -416,7 +420,7 @@ window.Quarto = {
 <figcaption>Schematic</figcaption>
 </figure>
 </div>
-<p>The schematic in Figure 1 demonstrates the physical layout of the design. The pin was connected to a potentiameter. This allowed the volume of the speaker to be adjusted. The aplifier had a gain of 20, and allowed the music notes to be played at a suitable noise level.</p>
+<p>The schematic in Figure 2 demonstrates the physical layout of the design. The pin was connected to a potentiameter. This allowed the volume of the speaker to be adjusted. The aplifier had a gain of 20, and allowed the music notes to be played at a suitable noise level.</p>
 </section>
 <section id="conclusion" class="level3">
 <h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
