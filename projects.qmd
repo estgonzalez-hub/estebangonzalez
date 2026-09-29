@@ -20,7 +20,7 @@ Leading Software Defined Radio (SDR) signal processing to test and characterize 
 * **Key Focus:** Return loss, mutual coupling, element/array radiation patterns, axial ratios, null testing, Jamming-to-Noise ($J/N$) ratio, and beam steering.
 * **Tools & Tech:** SDRs, Vector Network Analyzer (VNA), MATLAB/Python, RF Testing
 
-[View Detailed Write-Up →](projects/crpa-characterization.qmd){.btn .btn-outline-primary .btn-sm role="button" .mt-2}
+[View Project →](projects/crpa-characterization.qmd){.btn .btn-outline-primary .btn-sm role="button" .mt-2}
 :::
 :::
 :::
@@ -31,7 +31,7 @@ Leading Software Defined Radio (SDR) signal processing to test and characterize 
 ::: {.card-body}
 ![](projects/images/robot-thumb.jpg){.card-img-top alt="Autonomous Diving Robot"}
 ###  Autonomous Underwater Robot
-**Hardware & Systems Engineer**  
+**Hardware & Systems Lead**  
 *Team of 4*
 
 Designed and fabricated an autonomous robot capable of both surface navigation and controlled underwater diving to perform bathymetric floor mapping and environmental sampling.
@@ -39,7 +39,7 @@ Designed and fabricated an autonomous robot capable of both surface navigation a
 * **Key Focus:** Sensor integration (sonar depth measurement, pressure, temperature), ballast/surface motion control, and 3D floor contour generation.
 * **Tools & Tech:** Sonar Processing, Microcontrollers, 3D Mapping, Sensor Fusion
 
-[View Detailed Write-Up →](projects/autonomous-submersible.qmd){.btn .btn-outline-primary .btn-sm role="button" .mt-2}
+[View project →](projects/autonomous-submersible.qmd){.btn .btn-outline-primary .btn-sm role="button" .mt-2}
 :::
 :::
 :::
@@ -50,15 +50,15 @@ Designed and fabricated an autonomous robot capable of both surface navigation a
 ![](projects/images/filter-thumb.jpg){.card-img-top alt="Smart Air Purifier Prototype"}
 ::: {.card-body}
 ###  Smart High-CADR Indoor Air Purifier
-**Individual Summer Researcher**  
-*Independent Summer Research*
+**LILAQ Summer Undergraduate Researcher**  
+
 
 Engineered a custom DIY indoor air purification system that outperforms commercial off-the-shelf units in Clean Air Delivery Rate (CADR) at a significantly lower cost.
 
-* **Key Focus:** Fluid flow optimization, cost reduction, and ongoing phase-2 integration of a particulate matter (PM2.5) sensor and microcontroller for automated fan speeds.
+* **Key Focus:** Cost reduction and ongoing phase-2 integration of a particulate matter (PM2.5) sensor and microcontroller for automated fan speeds.
 * **Tools & Tech:** PM Sensors, Microcontrollers, System Prototyping, C/C++
 
-[View Detailed Write-Up →](projects/smart-air-purifier.qmd){.btn .btn-outline-primary .btn-sm role="button" .mt-2}
+[View Project →](projects/smart-air-purifier.qmd){.btn .btn-outline-primary .btn-sm role="button" .mt-2}
 :::
 :::
 :::

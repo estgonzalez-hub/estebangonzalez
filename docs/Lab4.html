@@ -276,11 +276,11 @@ ul.task-list li input[type="checkbox"] {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-e155-labs">    
         <li>
     <a class="dropdown-item" href="./Lab1.html">
- <span class="dropdown-text">Lab 1: FPGA &amp; SystemVerilog</span></a>
+ <span class="dropdown-text">Lab 1: Soldering &amp; FPGA</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./Lab2.html">
- <span class="dropdown-text">Lab 2: Microcontroller SPI Interface</span></a>
+ <span class="dropdown-text">Lab 2: FPGA SPI Interface</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./Lab3.html">
@@ -292,15 +292,15 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li>
     <a class="dropdown-item" href="./Lab5.html">
- <span class="dropdown-text">Lab 5: Digital Signal Processing</span></a>
+ <span class="dropdown-text">Lab 5</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./Lab6.html">
- <span class="dropdown-text">Lab 6: I2C Sensor Integration</span></a>
+ <span class="dropdown-text">Lab 6</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./Lab7.html">
- <span class="dropdown-text">Lab 7: Autonomous MCU System</span></a>
+ <span class="dropdown-text">Lab 7</span></a>
   </li>  
     </ul>
   </li>
@@ -333,7 +333,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#lab-4---digital-audio" id="toc-lab-4---digital-audio" class="nav-link active" data-scroll-target="#lab-4---digital-audio">Lab 4 - Digital Audio</a></li>
+  <li><a href="#lab-4---digital-audio" id="toc-lab-4---digital-audio" class="nav-link active" data-scroll-target="#lab-4---digital-audio">Lab 4 - Digital Audio</a>
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#design-and-testing-methodology" id="toc-design-and-testing-methodology" class="nav-link" data-scroll-target="#design-and-testing-methodology">Design and Testing Methodology</a></li>
+  <li><a href="#calculations" id="toc-calculations" class="nav-link" data-scroll-target="#calculations">Calculations</a></li>
+  <li><a href="#schematic" id="toc-schematic" class="nav-link" data-scroll-target="#schematic">Schematic</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#ai-prototype-summary" id="toc-ai-prototype-summary" class="nav-link" data-scroll-target="#ai-prototype-summary">AI Prototype Summary</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -346,9 +354,44 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="lab-4---digital-audio" class="level2">
 <h2 class="anchored" data-anchor-id="lab-4---digital-audio">Lab 4 - Digital Audio</h2>
-<p>Description of Lab 4.</p>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>In this lab, the STM32L432KC was used to read an array of frequency and duration numbers and generates a corresponding square wave to play a song on a speaker.</p>
+</section>
+<section id="design-and-testing-methodology" class="level3">
+<h3 class="anchored" data-anchor-id="design-and-testing-methodology">Design and Testing Methodology</h3>
+<p>The design was developed using TIM15 and TIM16 for the duration and frequency. Additionally, my own device drivers were made from scratch using only the reference manual as a reference. A total of five header files were created to meet the design requirements.</p>
+<p>The source code for the project can be found in the associated <a href="https://github.com/estgonzalez-hub/Micro_Ps">Github repository</a></p>
+</section>
+<section id="calculations" class="level3">
+<h3 class="anchored" data-anchor-id="calculations">Calculations</h3>
+<p>The minimum duration of a note was calculated the following way:</p>
+<p>The maximum duration of a note was calculated the following way:</p>
+<p>The maximum frequency of a note was calculated the following way:</p>
+<p>The minimum frequency was calculated the following way:</p>
+<p>The calculations for all the notes of Fur Elise is below: <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyViy7JWPQBBZ94MI-grA6d8Q5XPr4eMw4vzxMXkO0Kxr3c2jL587PqJWSTTV62l4VDhm6-9Res4NC/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe></p>
+</section>
+<section id="schematic" class="level3">
+<h3 class="anchored" data-anchor-id="schematic">Schematic</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/schematic_Lab4.jpg" class="img-fluid figure-img"></p>
+<figcaption>Schematic</figcaption>
+</figure>
+</div>
+<p>The schematic in Figure 1 demonstrates the physical layout of the design. The pin was connected to a potentiameter. This allowed the volume of the speaker to be adjusted. The aplifier had a gain of 20, and allowed the music notes to be played at a suitable noise level.</p>
+</section>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<p>All the prescribed tasks were accomplished successfully. The speaker played Fur Elise, and the code is able to be easily modified to play a song of the user’s choice. For my purpose, I played the Imperial March from Star Wars.</p>
+</section>
+<section id="ai-prototype-summary" class="level3">
+<h3 class="anchored" data-anchor-id="ai-prototype-summary">AI Prototype Summary</h3>
+<p>The LLM can be a useful tool to sift through large documents. When tasked to find a timer that is suitable for this project, it listed all the potential timers I can use. This list was the most helpful, as it narrows down the scope and allows you to easily go find those specific timers in the manual. It then made a suggestion to use TIM2. I did not use this timer, but it could be feasible using it.</p>
+<p>It did say that it recommended the timer I used, which leads me to beleive it’s other suggestions are good as well. Over all, an LLM can be a useful tool to help narrow the scope down when lookng at a document. Instead of looking through a 1600 pages, it tells you what is feasible and where you can find more information on them. Much more manageable.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

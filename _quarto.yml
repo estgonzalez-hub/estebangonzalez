@@ -12,19 +12,19 @@ website:
         text: Projects  
       - text: "E155 Labs"
         menu:
-          - text: "Lab 1: FPGA & SystemVerilog"
+          - text: "Lab 1: Soldering & FPGA"
             href: Lab1.qmd
-          - text: "Lab 2: Microcontroller SPI Interface"
+          - text: "Lab 2: FPGA SPI Interface"
             href: Lab2.qmd
           - text: "Lab 3: Keypad & LED Driver"
             href: Lab3.qmd
           - text: "Lab 4: Audio DAC & PWM"
             href: Lab4.qmd
-          - text: "Lab 5: Digital Signal Processing"
+          - text: "Lab 5"
             href: Lab5.qmd
-          - text: "Lab 6: I2C Sensor Integration"
+          - text: "Lab 6"
             href: Lab6.qmd
-          - text: "Lab 7: Autonomous MCU System"
+          - text: "Lab 7 "
             href: Lab7.qmd
       - href: Esteban_Gonzalez_Resume.pdf
         text: Resume
