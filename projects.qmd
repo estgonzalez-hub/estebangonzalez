@@ -9,7 +9,7 @@ toc: false
 <!-- PROJECT 1: Aerospace Corp & FAA CRPA -->
 ::: {.g-col-12 .g-col-md-6}
 ::: {.card .h-100 .shadow-sm}
-![](projects/images/crpa-thumb.jpg){.card-img-top alt="CRPA Testing Setup"}
+![](projects/images/rf_lab.png){.card-img-top alt="CRPA Testing Setup"}
 ::: {.card-body}
 ###  CRPA Antenna Characterization
 **SDR Lead | Harvey Mudd Collge**  
@@ -29,7 +29,7 @@ Leading Software Defined Radio (SDR) signal processing to test and characterize 
 ::: {.g-col-12 .g-col-md-6}
 ::: {.card .h-100 .shadow-sm}
 ::: {.card-body}
-![](projects/images/robot-thumb.jpg){.card-img-top alt="Autonomous Diving Robot"}
+![](projects/images/E80_auv.png){.card-img-top alt="Autonomous Diving Robot"}
 ###  Autonomous Underwater Robot
 **Hardware & Systems Lead**  
 *Team of 4*
@@ -47,7 +47,7 @@ Designed and fabricated an autonomous robot capable of both surface navigation a
 <!-- PROJECT 3: Smart High-CADR Air Purifier -->
 ::: {.g-col-12 .g-col-md-6}
 ::: {.card .h-100 .shadow-sm}
-![](projects/images/filter-thumb.jpg){.card-img-top alt="Smart Air Purifier Prototype"}
+![](projects/images/airfilter.png){.card-img-top alt="Smart Air Purifier Prototype"}
 ::: {.card-body}
 ###  Smart High-CADR Indoor Air Purifier
 **LILAQ Summer Undergraduate Researcher**  
