@@ -10,9 +10,13 @@ toc: false
 ::: {.g-col-12 .g-col-md-6}
 ::: {.card .h-100 .shadow-sm}
 ![](images/rf_lab.png){.card-img-top alt="CRPA Testing Setup"}
+
 ::: {.card-body}
+
 ###  CRPA Antenna Characterization
-**SDR Lead | Harvey Mudd Collge**  
+
+**SDR Lead | Harvey Mudd College**  
+
 *August 2026 – Present (Team of 7)*
 
 Leading Software Defined Radio (SDR) signal processing to test and characterize a Controlled Reception Pattern Antenna (CRPA) for anti-jamming performance. 
@@ -30,8 +34,11 @@ Leading Software Defined Radio (SDR) signal processing to test and characterize 
 ::: {.card .h-100 .shadow-sm}
 ::: {.card-body}
 ![](images/E80_auv.png){.card-img-top alt="Autonomous Diving Robot"}
+
 ###  Autonomous Underwater Robot
+
 **Hardware & Systems Lead**  
+
 *Team of 4*
 
 Designed and fabricated an autonomous robot capable of both surface navigation and controlled underwater diving to perform bathymetric floor mapping and environmental sampling.
@@ -48,8 +55,11 @@ Designed and fabricated an autonomous robot capable of both surface navigation a
 ::: {.g-col-12 .g-col-md-6}
 ::: {.card .h-100 .shadow-sm}
 ![](images/airfilter.png){.card-img-top alt="Smart Air Purifier Prototype"}
+
 ::: {.card-body}
+
 ###  Smart High-CADR Indoor Air Purifier
+
 **LILAQ Summer Undergraduate Researcher**  
 
 
