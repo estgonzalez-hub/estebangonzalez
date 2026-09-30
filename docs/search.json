@@ -53,14 +53,7 @@
     "href": "index.html",
     "title": "Esteban Gonzalez",
     "section": "",
-    "text": "I am a Junior Engineering student at Harvey Mudd College passionate about electrical engineering and hardware design. My technical interests range from digital system design with microprocessors and FPGAs to Radio Frequency circuitry and signal processing. Outside the lab, you can find me running or watching movies."
-  },
-  {
-    "objectID": "index.html#featured-work",
-    "href": "index.html#featured-work",
-    "title": "Esteban Gonzalez",
-    "section": "Featured Work",
-    "text": "Featured Work\n\nRF & Hardware Projects: Personal and course projects covering schematic design, signal processing, and hardware prototyping. View Projects →\nMicroprocessor System Design (E155): 7 custom FPGA & ARM Cortex-M hardware labs featuring SystemVerilog, SPI/I2C, and custom peripherals. View Labs →"
+    "text": "I am a Junior Engineering student at Harvey Mudd College passionate about electrical engineering and hardware design. My technical interests range from digital system design with microprocessors and FPGAs to Radio Frequency circuitry and signal processing. Outside the lab, you can find me running or watching movies.\n\n\nRF & Hardware Projects: Personal and course projects covering schematic design, signal processing, and hardware prototyping. View Projects →\nMicroprocessor System Design (E155): 7 custom FPGA & ARM Cortex-M hardware labs featuring SystemVerilog, SPI/I2C, and custom peripherals. View Labs →"
   },
   {
     "objectID": "about.html",
