@@ -20,7 +20,7 @@ website:
             href: Lab3.qmd
           - text: "Lab 4: Audio DAC & PWM"
             href: Lab4.qmd
-          - text: "Lab 5"
+          - text: "Lab 5: Interrupts"
             href: Lab5.qmd
           - text: "Lab 6"
             href: Lab6.qmd

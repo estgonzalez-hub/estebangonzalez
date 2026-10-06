@@ -321,7 +321,7 @@ window.Quarto = {
   </li>  
         <li>
     <a class="dropdown-item" href="./Lab5.html">
- <span class="dropdown-text">Lab 5</span></a>
+ <span class="dropdown-text">Lab 5: Interrupts</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./Lab6.html">
@@ -403,9 +403,9 @@ window.Quarto = {
 <p>Lastly, we can calculate angular frequency revs/sec using the two values we already found:</p>
 <p><span class="math inline">\(angular velocity = freq/ t * 4*counts\)</span></p>
 <p>where counts is the counts per revoloution of the motor. This value can be found from the motor datasheet. The reason we multiply by four is because in our code we look at the rising and falling edge of each encoder channel. The datasheet only reports the rising edge of one channel.</p>
-<p>An example calculation is provided below:</p>
-<p><span class="math inline">\(angular velocity = (395 * 4 * 3)/ 1 * 1632 = ~2.9 rev/sec\)</span></p>
-<p>There is important things to consider when it comes to using interrupts versus polling at high speeds. In the case of the motor, that the encoder is constantly sending signals it is actually better to use polling instead of interrupts. The reason is that the motor speed can become fast enough that the pulse edges are arriving faster than the time it takes to process one ISR. This would make the main() code freeze, and the code we upload would effectively be trash. If you go the polling route, you can choose the sample rate which wouldn’t cause any negative effects in your code. For example, if the encoder was sending pulses at 200 kHz, an edge would arrive roughly once every 5 us. This means the CPU has to read and update registers 200,000 times per second. This limits the amount of CPU you can use for other tasks, and can eventually reach 100% of your CPU power.</p>
+<p>To verify the angular speed, an oscilliscope was used to measure the actual frequencies of the enncoder channels. Using the 12 V motor in the lab, the oscilliscope probe was connected to channel A. It was reading a frequency of 1.143 kHZ. We know the motor produces 408 pulses per revoloution, so plugging in these numbers into our calculations gives us:</p>
+<p><span class="math inline">\(angular velocity = (1.142 kHz)/ 408 pulses = 2.79 revs/sec\)</span></p>
+<p>There is important things to consider when it comes to using interrupts versus polling at high speeds. In the case of the motor, that the encoder is constantly sending signals it is actually better to use polling instead of interrupts. The reason is that the motor speed can become fast enough that the pulse edges are arriving faster than the time it takes to process one ISR. This would make the main() code freeze, and the code we upload would effectively be trash. If you go the polling route, you can choose the sample rate which wouldn’t cause any negative effects in your code. For example, if the encoder was sending pulses at 4 MHz, an edge would arrive roughly once every 250 ns. This means the CPU has to read and update registers 4 million times per second. This also happens to be the speed the mcu clock is at, so it effectively jams the program. It won’t be able to execute code as it will be too busy handling the interrupts the entire time.power.</p>
 </section>
 <section id="schematic-and-flowchart" class="level3">
 <h3 class="anchored" data-anchor-id="schematic-and-flowchart">Schematic and Flowchart</h3>
