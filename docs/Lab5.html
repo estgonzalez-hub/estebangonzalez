@@ -78,6 +78,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -333,7 +362,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#lab-5---interrupts" id="toc-lab-5---interrupts" class="nav-link active" data-scroll-target="#lab-5---interrupts">Lab 5 - Interrupts</a></li>
+  <li><a href="#lab-5---interrupts" id="toc-lab-5---interrupts" class="nav-link active" data-scroll-target="#lab-5---interrupts">Lab 5 - Interrupts</a>
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#design-and-testing-methodology" id="toc-design-and-testing-methodology" class="nav-link" data-scroll-target="#design-and-testing-methodology">Design and Testing Methodology</a></li>
+  <li><a href="#calculations" id="toc-calculations" class="nav-link" data-scroll-target="#calculations">Calculations</a></li>
+  <li><a href="#schematic-and-flowchart" id="toc-schematic-and-flowchart" class="nav-link" data-scroll-target="#schematic-and-flowchart">Schematic and Flowchart</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#ai-prototype-summary" id="toc-ai-prototype-summary" class="nav-link" data-scroll-target="#ai-prototype-summary">AI Prototype Summary</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -346,9 +383,56 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="lab-5---interrupts" class="level2">
 <h2 class="anchored" data-anchor-id="lab-5---interrupts">Lab 5 - Interrupts</h2>
-<p>Description of Lab 5.</p>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>In this lab, the STM32L432KC was used to read an encoder with two channels to determine the angular velocity of a brushed DC motor.</p>
+</section>
+<section id="design-and-testing-methodology" class="level3">
+<h3 class="anchored" data-anchor-id="design-and-testing-methodology">Design and Testing Methodology</h3>
+<p>The design was developed using TIM2 and interrupts. Interrupts were used to accurately read the signals from the encoder at high speeds. A total of three header files were created to meet the design requirements.</p>
+<p>The source code for the project can be found in the associated <a href="https://github.com/estgonzalez-hub/Micro_Ps">Github repository</a></p>
+</section>
+<section id="calculations" class="level3">
+<h3 class="anchored" data-anchor-id="calculations">Calculations</h3>
+<p>The encoder has 2 channels that are 90 degrees out of phase with each other. As the motor spins, one channel goes high while the other stays low. Then as the motor continues spinning, the orignal channel goes low while the other goes high. This pattern generates a square wave that we can feed as an input into our microcontroller. The microcontroller then can read these square waves and calculate how many revoloutions the motor is doing. To find the revoloutions or angular velocity, the following calculations were used and implemented in software.</p>
+<p>The angular velocity of the motor was calculated as follows:</p>
+<p>First, we calculated the time between pulses and converted it to seconds</p>
+<p><span class="math inline">\(t = (current pulse - previous pulse)/1,000,000 us\)</span></p>
+<p>Next, we need to calculate the frequency of the pulse in counts per second:</p>
+<p><span class="math inline">\(freq = (current count - previous count)/t\)</span></p>
+<p>Lastly, we can calculate angular frequency revs/sec using the two values we already found:</p>
+<p>$angular velocity = freq/ t * 4*counts $</p>
+<p>where counts is the counts per revoloution of the motor. This value can be found from the motor datasheet. The reason we multiply by four is because in our code we look at the rising and falling edge of each encoder channel. The datasheet only reports the rising edge of one channel.</p>
+<p>An example calculation is provided below:</p>
+<p>$angular velocity = (395 * 4 * 3)/ 1 * 1632 = ~2.9 rev/sec $</p>
+<p>There is important things to consider when it comes to using interrupts versus polling at high speeds. In the case of the motor, that the encoder is constantly sending signals it is actually better to use polling instead of interrupts. The reason is that the motor speed can become fast enough that the pulse edges are arriving faster than the time it takes to process one ISR. This would make the main() code freeze, and the code we upload would effectively be trash. If you go the polling route, you can choose the sample rate which wouldn’t cause any negative effects in your code. For example, if the encoder was sending pulses at 200 kHz, an edge would arrive roughly once every 5 us. This means the CPU has to read and update registers 200,000 times per second. This limits the amount of CPU you can use for other tasks, and can eventually reach 100% of your CPU power.</p>
+</section>
+<section id="schematic-and-flowchart" class="level3">
+<h3 class="anchored" data-anchor-id="schematic-and-flowchart">Schematic and Flowchart</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/e155_lab5_schematic5.jpg" class="img-fluid figure-img"></p>
+<figcaption>Schematic</figcaption>
+</figure>
+</div>
+<p>The schematic in Figure 2 demonstrates the physical layout of the design. Pins 8 and 9 were connected to channels A and B of the encoder. This allowed the microcontroller to read the signals from the encoder and calculate the angular velocity.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/lab5_flowchart.jpg" class="img-fluid figure-img"></p>
+<figcaption>Flowchart</figcaption>
+</figure>
+</div>
+<p>The flowchart above represents the interrupts used for this lab.</p>
+</section>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<p>All the prescribed tasks were accomplished successfully. The microcontroller was able to accurately read the revoultions per second of the motor. Even at full speed or extremely low speed, the microcontroller was still able to report sensible values for angular velocity.</p>
+</section>
+<section id="ai-prototype-summary" class="level3">
+<h3 class="anchored" data-anchor-id="ai-prototype-summary">AI Prototype Summary</h3>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
