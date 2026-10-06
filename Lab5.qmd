@@ -27,20 +27,20 @@ $freq = (current count - previous count)/t$
 
 Lastly, we can calculate angular frequency revs/sec using the two values we already found:
 
-$angular velocity = freq/ t * 4*counts $
+$angular velocity = freq/ t * 4*counts$
 
 
 where counts is the counts per revoloution of the motor. This value can be found from the motor datasheet. The reason we multiply by four is because in our code we look at the rising and falling edge of each encoder channel. The datasheet only reports the rising edge of one channel. 
 
 An example calculation is provided below:
 
-$angular velocity = (395 * 4 * 3)/ 1 * 1632 = ~2.9 rev/sec $
+$angular velocity = (395 * 4 * 3)/ 1 * 1632 = ~2.9 rev/sec$
 
 There is important things to consider when it comes to using interrupts versus polling at high speeds. In the case of the motor, that the encoder is constantly sending signals it is actually better to use polling instead of interrupts. The reason is that the motor speed can become fast enough that the pulse edges are arriving faster than the time it takes to process one ISR. This would make the main() code freeze, and the code we upload would effectively be trash. If you go the polling route, you can choose the sample rate which wouldn't cause any negative effects in your code. For example, if the encoder was sending pulses at 200 kHz, an edge would arrive roughly once every 5 us. This means the CPU has to read and update registers 200,000 times per second. This limits the amount of CPU you can use for other tasks, and can eventually reach 100% of your CPU power.  
 
 ### Schematic and Flowchart
 
-![Schematic](images/e155_lab5_schematic5.jpg){fig-cap="Figure 1. Schematic of the encoder and brushed DC motor used."}
+![Schematic](images/e155_lab5_schematic.jpg){fig-cap="Figure 1. Schematic of the encoder and brushed DC motor used."}
 
 
 The schematic in Figure 2 demonstrates the physical layout of the design. Pins 8 and 9 were connected to channels A and B of the encoder. This allowed the microcontroller to read the signals from the encoder and calculate the angular velocity. 
@@ -56,6 +56,7 @@ All the prescribed tasks were accomplished successfully. The microcontroller was
 
 ### AI Prototype Summary
 
+After plugging in "Write me interrupt handlers to interface with a quadrature encoder. I’m using the STM32L432KC, what pins should I connect the encoder to in order to allow it to easily trigger the interrupts?" to gemini, it gave me surprisingly good recommendations. It recommended pins PA0 and PA1 which map directly to TIM2. Outside of that, the output of gemini was not the best. It provided a lot of extra things that were not neccessary, such as an error counter and a "Hardware input filter to suppress bounce noise". I believe the encoders don't have bounce noise as they are not buttons. 
 
 
 
