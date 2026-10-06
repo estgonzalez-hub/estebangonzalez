@@ -40,7 +40,7 @@ There is important things to consider when it comes to using interrupts versus p
 
 ### Schematic and Flowchart
 
-![Schematic](images/e155_lab5_schematic.jpg){fig-cap="Figure 1. Schematic of the encoder and brushed DC motor used."}
+![Schematic](images/schematic_lab5.jpg){fig-cap="Figure 1. Schematic of the encoder and brushed DC motor used."}
 
 
 The schematic in Figure 2 demonstrates the physical layout of the design. Pins 8 and 9 were connected to channels A and B of the encoder. This allowed the microcontroller to read the signals from the encoder and calculate the angular velocity. 
