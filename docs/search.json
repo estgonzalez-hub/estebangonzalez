@@ -53,7 +53,21 @@
     "href": "index.html",
     "title": "Esteban Gonzalez",
     "section": "",
-    "text": "I am a Junior Engineering student at Harvey Mudd College passionate about electrical engineering and hardware design. My technical interests range from digital system design with microprocessors and FPGAs to Radio Frequency circuitry and signal processing. Outside the lab, you can find me running or watching movies.\n\n\nRF & Hardware Projects: Personal and course projects covering schematic design, signal processing, and hardware prototyping. View Projects →\nMicroprocessor System Design (E155): 7 custom FPGA & ARM Cortex-M hardware labs featuring SystemVerilog, SPI/I2C, and custom peripherals. View Labs →"
+    "text": "I am a Junior Engineering student at Harvey Mudd College passionate about electrical engineering and hardware design. My technical interests range from digital system design with microprocessors and FPGAs to Radio Frequency circuitry and signal processing. Outside the lab, you can find me running or watching movies."
+  },
+  {
+    "objectID": "index.html#projects",
+    "href": "index.html#projects",
+    "title": "Esteban Gonzalez",
+    "section": "Projects",
+    "text": "Projects\n\n\n\n\n\nCRPA Antenna Characterization\nSDR Lead | Harvey Mudd College\nAugust 2026 – Present (Team of 7)\nLeading Software Defined Radio (SDR) signal processing to test and characterize a Controlled Reception Pattern Antenna (CRPA) for anti-jamming performance.\n\nKey Focus: Return loss, mutual coupling, element/array radiation patterns, axial ratios, null testing, Jamming-to-Noise (\\(J/N\\)) ratio, and beam steering.\nTools & Tech: SDRs, Vector Network Analyzer (VNA), MATLAB/Python, RF Testing\n\nView Project →\n\n\n\n\n\n\n\nAutonomous Underwater Robot\nHardware & Systems Lead\nTeam of 4\nDesigned and fabricated an autonomous robot capable of both surface navigation and controlled underwater diving to perform bathymetric floor mapping and environmental sampling.\n\nKey Focus: Sensor integration (sonar depth measurement, pressure, temperature), ballast/surface motion control, and 3D floor contour generation.\nTools & Tech: Sonar Processing, Microcontrollers, 3D Mapping, Sensor Fusion\n\nView Project →\n\n\n\n\n\n\n\nSmart High-CADR Indoor Air Purifier\nLILAQ Summer Undergraduate Researcher\nEngineered a custom DIY indoor air purification system that outperforms commercial off-the-shelf units in Clean Air Delivery Rate (CADR) at a significantly lower cost.\n\nKey Focus: Cost reduction and ongoing phase-2 integration of a particulate matter (PM2.5) sensor and microcontroller for automated fan speeds.\nTools & Tech: PM Sensors, Microcontrollers, System Prototyping, C/C++\n\nView Project →"
+  },
+  {
+    "objectID": "index.html#coursework",
+    "href": "index.html#coursework",
+    "title": "Esteban Gonzalez",
+    "section": "Coursework",
+    "text": "Coursework\n\nMicroprocessor System Design (E155): 7 custom FPGA & ARM Cortex-M hardware labs featuring SystemVerilog, SPI/I2C, and custom peripherals. View Labs →"
   },
   {
     "objectID": "about.html",

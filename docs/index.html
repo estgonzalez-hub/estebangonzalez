@@ -77,6 +77,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -341,13 +370,66 @@ ul.task-list li input[type="checkbox"] {
 </header><main class="content" id="quarto-document-content">
 
 <p>I am a Junior Engineering student at Harvey Mudd College passionate about electrical engineering and hardware design. My technical interests range from digital system design with microprocessors and FPGAs to Radio Frequency circuitry and signal processing. Outside the lab, you can find me running or watching movies.</p>
-<hr>
+<section id="projects" class="level2">
+<h2 data-anchor-id="projects">Projects</h2>
+<div class="grid">
+<div class="g-col-12 g-col-md-6">
+<div class="card h-100 shadow-sm">
+<p><img src="images/rf_lab.png" class="card-img-top img-fluid" alt="CRPA Testing Setup"></p>
+<section id="crpa-antenna-characterization" class="level3 card-body">
+<h3 data-anchor-id="crpa-antenna-characterization">CRPA Antenna Characterization</h3>
+<p><strong>SDR Lead | Harvey Mudd College</strong></p>
+<p><em>August 2026 – Present (Team of 7)</em></p>
+<p>Leading Software Defined Radio (SDR) signal processing to test and characterize a Controlled Reception Pattern Antenna (CRPA) for anti-jamming performance.</p>
 <ul>
-<li><strong>RF &amp; Hardware Projects:</strong> Personal and course projects covering schematic design, signal processing, and hardware prototyping. <a href="./projects.html">View Projects →</a></li>
+<li><strong>Key Focus:</strong> Return loss, mutual coupling, element/array radiation patterns, axial ratios, null testing, Jamming-to-Noise (<span class="math inline">\(J/N\)</span>) ratio, and beam steering.</li>
+<li><strong>Tools &amp; Tech:</strong> SDRs, Vector Network Analyzer (VNA), MATLAB/Python, RF Testing</li>
+</ul>
+<p><a href="projects/crpa-characterization.qmd" class="btn btn-outline-primary btn-sm mt-2" role="button">View Project →</a></p>
+</section>
+</div>
+</div>
+<div class="g-col-12 g-col-md-6">
+<div class="card h-100 shadow-sm">
+<p><img src="images/E80_auv.png" class="card-img-top img-fluid" alt="Autonomous Diving Robot"></p>
+<section id="autonomous-underwater-robot" class="level3 card-body">
+<h3 data-anchor-id="autonomous-underwater-robot">Autonomous Underwater Robot</h3>
+<p><strong>Hardware &amp; Systems Lead</strong></p>
+<p><em>Team of 4</em></p>
+<p>Designed and fabricated an autonomous robot capable of both surface navigation and controlled underwater diving to perform bathymetric floor mapping and environmental sampling.</p>
+<ul>
+<li><strong>Key Focus:</strong> Sensor integration (sonar depth measurement, pressure, temperature), ballast/surface motion control, and 3D floor contour generation.</li>
+<li><strong>Tools &amp; Tech:</strong> Sonar Processing, Microcontrollers, 3D Mapping, Sensor Fusion</li>
+</ul>
+<p><a href="projects/autonomous-submersible.qmd" class="btn btn-outline-primary btn-sm mt-2" role="button">View Project →</a></p>
+</section>
+</div>
+</div>
+<div class="g-col-12 g-col-md-6">
+<div class="card h-100 shadow-sm">
+<p><img src="images/airfilter.png" class="card-img-top img-fluid" alt="Smart Air Purifier Prototype"></p>
+<section id="smart-high-cadr-indoor-air-purifier" class="level3 card-body">
+<h3 data-anchor-id="smart-high-cadr-indoor-air-purifier">Smart High-CADR Indoor Air Purifier</h3>
+<p><strong>LILAQ Summer Undergraduate Researcher</strong></p>
+<p>Engineered a custom DIY indoor air purification system that outperforms commercial off-the-shelf units in Clean Air Delivery Rate (CADR) at a significantly lower cost.</p>
+<ul>
+<li><strong>Key Focus:</strong> Cost reduction and ongoing phase-2 integration of a particulate matter (PM2.5) sensor and microcontroller for automated fan speeds.</li>
+<li><strong>Tools &amp; Tech:</strong> PM Sensors, Microcontrollers, System Prototyping, C/C++</li>
+</ul>
+<p><a href="projects/smart-air-purifier.qmd" class="btn btn-outline-primary btn-sm mt-2" role="button">View Project →</a></p>
+</section>
+</div>
+</div>
+</div>
+</section>
+<section id="coursework" class="level2">
+<h2 data-anchor-id="coursework">Coursework</h2>
+<ul>
 <li><strong>Microprocessor System Design (E155):</strong> 7 custom FPGA &amp; ARM Cortex-M hardware labs featuring SystemVerilog, SPI/I2C, and custom peripherals. <a href="./Lab7.html">View Labs →</a></li>
 </ul>
 
 
+</section>
 </main> 
   <hr class="about-sep">
    <div class="about-links">
