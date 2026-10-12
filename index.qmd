@@ -22,7 +22,7 @@ I am a Junior Engineering student at Harvey Mudd College passionate about electr
 
 ::: {.grid}
 
-::: {.g-col-12 .g-col-md-6}
+::: {.g-col-12 .g-col-12}
 ::: {.card .h-100 .shadow-sm}
 ![](images/rf_lab.png){.card-img-top alt="CRPA Testing Setup"}
 
@@ -43,7 +43,7 @@ Leading Software Defined Radio (SDR) signal processing to test and characterize 
 :::
 :::
 
-::: {.g-col-12 .g-col-md-6}
+::: {.g-col-12 .g-col-12}
 ::: {.card .h-100 .shadow-sm}
 ![](images/E80_auv.png){.card-img-top alt="Autonomous Diving Robot"}
 
@@ -64,7 +64,7 @@ Designed and fabricated an autonomous robot capable of both surface navigation a
 :::
 :::
 
-::: {.g-col-12 .g-col-md-6}
+::: {.g-col-12 .g-col-12}
 ::: {.card .h-100 .shadow-sm}
 ![](images/airfilter.png){.card-img-top alt="Smart Air Purifier Prototype"}
 
