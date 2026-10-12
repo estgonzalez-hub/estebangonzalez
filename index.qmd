@@ -18,7 +18,73 @@ about:
 
 I am a Junior Engineering student at Harvey Mudd College passionate about electrical engineering and hardware design. My technical interests range from digital system design with microprocessors and FPGAs to Radio Frequency circuitry and signal processing. Outside the lab, you can find me running or watching movies.
 
----
+## Projects
 
-* **RF & Hardware Projects:** Personal and course projects covering schematic design, signal processing, and hardware prototyping. [View Projects →](projects.qmd)
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card .h-100 .shadow-sm}
+![](images/rf_lab.png){.card-img-top alt="CRPA Testing Setup"}
+
+::: {.card-body}
+### CRPA Antenna Characterization
+
+**SDR Lead | Harvey Mudd College**
+
+*August 2026 – Present (Team of 7)*
+
+Leading Software Defined Radio (SDR) signal processing to test and characterize a Controlled Reception Pattern Antenna (CRPA) for anti-jamming performance.
+
+* **Key Focus:** Return loss, mutual coupling, element/array radiation patterns, axial ratios, null testing, Jamming-to-Noise ($J/N$) ratio, and beam steering.
+* **Tools & Tech:** SDRs, Vector Network Analyzer (VNA), MATLAB/Python, RF Testing
+
+[View Project →](projects/crpa-characterization.qmd){.btn .btn-outline-primary .btn-sm role="button" .mt-2}
+:::
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card .h-100 .shadow-sm}
+![](images/E80_auv.png){.card-img-top alt="Autonomous Diving Robot"}
+
+::: {.card-body}
+### Autonomous Underwater Robot
+
+**Hardware & Systems Lead**
+
+*Team of 4*
+
+Designed and fabricated an autonomous robot capable of both surface navigation and controlled underwater diving to perform bathymetric floor mapping and environmental sampling.
+
+* **Key Focus:** Sensor integration (sonar depth measurement, pressure, temperature), ballast/surface motion control, and 3D floor contour generation.
+* **Tools & Tech:** Sonar Processing, Microcontrollers, 3D Mapping, Sensor Fusion
+
+[View Project →](projects/autonomous-submersible.qmd){.btn .btn-outline-primary .btn-sm role="button" .mt-2}
+:::
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card .h-100 .shadow-sm}
+![](images/airfilter.png){.card-img-top alt="Smart Air Purifier Prototype"}
+
+::: {.card-body}
+### Smart High-CADR Indoor Air Purifier
+
+**LILAQ Summer Undergraduate Researcher**
+
+Engineered a custom DIY indoor air purification system that outperforms commercial off-the-shelf units in Clean Air Delivery Rate (CADR) at a significantly lower cost.
+
+* **Key Focus:** Cost reduction and ongoing phase-2 integration of a particulate matter (PM2.5) sensor and microcontroller for automated fan speeds.
+* **Tools & Tech:** PM Sensors, Microcontrollers, System Prototyping, C/C++
+
+[View Project →](projects/smart-air-purifier.qmd){.btn .btn-outline-primary .btn-sm role="button" .mt-2}
+:::
+:::
+:::
+
+:::
+
+## Coursework
+
 * **Microprocessor System Design (E155):** 7 custom FPGA & ARM Cortex-M hardware labs featuring SystemVerilog, SPI/I2C, and custom peripherals. [View Labs →](Lab7.qmd)
