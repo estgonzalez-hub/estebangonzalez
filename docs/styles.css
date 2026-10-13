@@ -28,10 +28,10 @@
 /* ---------- Hero / Projects separation ---------- */
 
 /* bold vertical divider between portrait and bio */
-.quarto-about-trestles .about-entity {
+.quarto-about-solana .about-entity {
   border-right: 4px solid var(--bs-info);
 }
-.quarto-about-trestles .about-contents {
+.quarto-about-solana .about-contents {
   border-left: none;
   align-self: center;   /* centers the bio vertically beside the portrait */
   padding-left: 2rem;
