@@ -4,21 +4,21 @@ image: images/1.JPG
 toc: false
 about:
   id: hero
-  template: solana 
+  template: solana
   image-shape: round
   image-width: 14em
-  links:
-    - icon: linkedin
-      text: LinkedIn
-      href: https://www.linkedin.com/in/esteban-gonzalez-981a2a430/
-    - icon: github
-      text: GitHub
-      href: https://github.com/estgonzalez-hub/Micro_Ps
 ---
 
 ::: {#hero}
 I am a Junior Engineering student at Harvey Mudd College passionate about electrical engineering and hardware design. My technical interests range from digital system design with microprocessors and FPGAs to Radio Frequency circuitry and signal processing.
 :::
+
+::: {.text-end .mb-3}
+[[]{.bi .bi-linkedin} LinkedIn](https://www.linkedin.com/in/esteban-gonzalez-981a2a430/){.btn .btn-outline-secondary .btn-sm}
+[[]{.bi .bi-github} GitHub](https://github.com/estgonzalez-hub/Micro_Ps){.btn .btn-outline-secondary .btn-sm}
+:::
+
+---
 
 ## Projects
 
