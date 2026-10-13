@@ -1,1 +1,26 @@
 /* css styles */
+/* Light navbar with blue hover */
+.navbar {
+  background-color: #f8f9fa !important;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: #1f2937 !important;
+  transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .nav-link.active,
+.navbar .navbar-brand:hover {
+  color: var(--bs-info) !important;
+}
+
+/* dropdown menus (Projects, E155 Labs) */
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+  background-color: var(--bs-info);
+  color: #fff;
+}

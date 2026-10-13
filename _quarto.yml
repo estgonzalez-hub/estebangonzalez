@@ -5,7 +5,10 @@ project:
 website:
   title: "Esteban Gonzalez"
   navbar:
+    background: light
+    foreground: "#1f2937"
     left:
+      # ...your existing items unchanged...
       - href: index.qmd
         text: Home
       - text: "Projects"  
