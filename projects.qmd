@@ -24,7 +24,7 @@ Leading Software Defined Radio (SDR) signal processing to test and characterize 
 * **Key Focus:** Return loss, mutual coupling, element/array radiation patterns, axial ratios, null testing, Jamming-to-Noise ($J/N$) ratio, and beam steering.
 * **Tools & Tech:** SDRs, Vector Network Analyzer (VNA), MATLAB/Python, RF Testing
 
-[View Project →](projects/crpa-characterization.qmd){.btn .btn-outline-primary .btn-sm role="button" .mt-2}
+[View Project →](crpa_charecterization.qmd){.btn .btn-outline-primary .btn-sm role="button" .mt-2}
 :::
 :::
 :::
@@ -46,7 +46,7 @@ Designed and fabricated an autonomous robot capable of both surface navigation a
 * **Key Focus:** Sensor integration (sonar depth measurement, pressure, temperature), ballast/surface motion control, and 3D floor contour generation.
 * **Tools & Tech:** Sonar Processing, Microcontrollers, 3D Mapping, Sensor Fusion
 
-[View project →](projects/autonomous-submersible.qmd){.btn .btn-outline-primary .btn-sm role="button" .mt-2}
+[View project →](auv.qmd){.btn .btn-outline-primary .btn-sm role="button" .mt-2}
 :::
 :::
 :::
@@ -68,7 +68,7 @@ Engineered a custom DIY indoor air purification system that outperforms commerci
 * **Key Focus:** Cost reduction and ongoing phase-2 integration of a particulate matter (PM2.5) sensor and microcontroller for automated fan speeds.
 * **Tools & Tech:** PM Sensors, Microcontrollers, System Prototyping, C/C++
 
-[View Project →](projects/smart-air-purifier.qmd){.btn .btn-outline-primary .btn-sm role="button" .mt-2}
+[View Project →](air_purifier.qmd){.btn .btn-outline-primary .btn-sm role="button" .mt-2}
 :::
 :::
 :::

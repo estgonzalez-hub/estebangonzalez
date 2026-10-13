@@ -8,8 +8,14 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: projects.qmd
-        text: Projects  
+      - text: "Projects"  
+        menu: 
+          - text: "CRPA Charecterization"
+            href: crpa_charecterization.qmd
+          - text: "Autonomous Underwater Robot"
+            href: auv.qmd
+          - text: "Smart Air Purifier"
+            href: air_purifier.qmd
       - text: "E155 Labs"
         menu:
           - text: "Lab 1: Soldering & FPGA"
