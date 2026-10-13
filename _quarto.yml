@@ -36,9 +36,11 @@ website:
 
 format:
   html:
-    theme: zephyr 
+    theme: zephyr
     css: styles.css
     toc: true
+    grid:
+      body-width: 1100px
 
 
 
