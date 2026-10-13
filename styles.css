@@ -25,30 +25,41 @@
   color: #fff;
 }
 
-/* ---------- Hero / Projects separation ---------- */
+/* ---------- Hero: bio left, portrait right ---------- */
 
-/* ---------- Hero (solana: bio left, portrait right) ---------- */
-
-/* reset any borders from the trestles version */
-.quarto-about-solana .about-contents,
-.quarto-about-solana .about-entity {
-  border: none;
+/* remove any inherited borders */
+.about-contents {
+  border: none !important;
 }
 
-/* bold divider between the bio and the portrait */
-.quarto-about-solana .about-entity {
-  border-left: 4px solid var(--bs-info);
-  padding-left: 2rem;
+/* bold blue divider between the bio and the portrait */
+.about-entity {
+  border: none !important;
+  border-left: 4px solid var(--bs-info) !important;
+  padding-left: 2rem !important;
   align-self: center;
 }
 
-/* bio: flush with the name, vertically centered, comfortable reading size */
-.quarto-about-solana .about-contents {
-  padding-left: 0;
-  padding-right: 2rem;
+/* bio flush with the name, vertically centered */
+.about-contents {
+  padding-left: 0 !important;
+  padding-right: 2rem !important;
   align-self: center;
   font-size: 1.1rem;
   line-height: 1.6;
+}
+.about-contents p {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+/* on phones the columns stack, so use a horizontal bar instead */
+@media (max-width: 768px) {
+  .about-entity {
+    border-left: none !important;
+    border-top: 4px solid var(--bs-info) !important;
+    padding: 1.5rem 0 0 !important;
+  }
 }
 
 /* bold underline + space above the Projects heading */
