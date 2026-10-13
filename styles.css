@@ -27,14 +27,26 @@
 
 /* ---------- Hero / Projects separation ---------- */
 
-/* bold vertical divider between portrait and bio */
+/* ---------- Hero (solana: bio left, portrait right) ---------- */
+
+/* reset any borders from the trestles version */
+.quarto-about-solana .about-contents,
 .quarto-about-solana .about-entity {
-  border-right: 4px solid var(--bs-info);
+  border: none;
 }
-.quarto-about-solana .about-contents {
-  border-left: none;
-  align-self: center;   /* centers the bio vertically beside the portrait */
+
+/* bold divider between the bio and the portrait */
+.quarto-about-solana .about-entity {
+  border-left: 4px solid var(--bs-info);
   padding-left: 2rem;
+  align-self: center;
+}
+
+/* bio: flush with the name, vertically centered, comfortable reading size */
+.quarto-about-solana .about-contents {
+  padding-left: 0;
+  padding-right: 2rem;
+  align-self: center;
   font-size: 1.1rem;
   line-height: 1.6;
 }
