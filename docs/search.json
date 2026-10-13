@@ -63,18 +63,18 @@
     "text": "Projects\n\n\n\n\n\n\n\nAug 2026 – Present · Harvey Mudd College\n\n\nCRPA Antenna Characterization\n\nSDRs RF Testing MATLAB Signal Processing\nLeading SDR signal processing to test and characterize a Controlled Reception Pattern Antenna (CRPA) array for anti-jamming performance and null steering.\nView Project →\n\n\n\n\n\n\n\n\n\n\nSpring 2026 · Hardware Lead\n\n\nAutonomous Underwater Robot\n\nRobotics Microcontrollers Sonar 3D Mapping\nDesigned and fabricated an autonomous underwater vehicle with custom sonar and sensor fusion for high-resolution bathymetric floor mapping.\nView Project →\n\n\n\n\n\n\n\n\n\n\nSummer 2026 · LILAQ Research\n\n\nSmart High-CADR Air Purifier\n\nEmbedded Systems Sensors C/C++ Prototyping\nEngineered a custom DIY air purification system that outperforms commercial units in Clean Air Delivery Rate (CADR) at a fraction of the cost.\nView Project →"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
     "objectID": "blog.html",
     "href": "blog.html",
     "title": "E155 Blog",
     "section": "",
     "text": "Hello Quarto\n\n\nI am very excited to be taking MicroPs this semester. It is a challenging course that will improve my technical abilities and time management skills. I am very passionate about this topic and be in a class that I’ve heard so much about.\n\n\n\n\n\nSep 8, 2024\n\n\nEsteban Gonzalez\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
   },
   {
     "objectID": "Lab1.html",

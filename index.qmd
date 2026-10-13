@@ -41,7 +41,7 @@ CRPA Antenna Characterization
 
 Leading SDR signal processing to test and characterize a Controlled Reception Pattern Antenna (CRPA) array for anti-jamming performance and null steering.
 
-[View Project →](projects/crpa-characterization.qmd){.btn .btn-info .btn-sm .rounded-pill}
+[View Project →](projects/crpa_characterization.qmd){.btn .btn-info .btn-sm .rounded-pill}
 
 :::
 
@@ -71,7 +71,7 @@ Autonomous Underwater Robot
 
 Designed and fabricated an autonomous underwater vehicle with custom sonar and sensor fusion for high-resolution bathymetric floor mapping.
 
-[View Project →](projects/autonomous-submersible.qmd){.btn .btn-info .btn-sm .rounded-pill}
+[View Project →](projects/auv.qmd){.btn .btn-info .btn-sm .rounded-pill}
 
 :::
 
@@ -101,7 +101,7 @@ Smart High-CADR Air Purifier
 
 Engineered a custom DIY air purification system that outperforms commercial units in Clean Air Delivery Rate (CADR) at a fraction of the cost.
 
-[View Project →](projects/smart-air-purifier.qmd){.btn .btn-info .btn-sm .rounded-pill}
+[View Project →](projects/air_purifier.qmd){.btn .btn-info .btn-sm .rounded-pill}
 
 :::
 
