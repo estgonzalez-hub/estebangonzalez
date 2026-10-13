@@ -20,93 +20,89 @@ I am a Junior Engineering student at Harvey Mudd College passionate about electr
 
 ## Projects
 
-::: {.card .shadow-sm .mb-4 .p-4 .rounded-4 .border-0 .bg-light .text-start}
-::: {.d-flex .flex-column .flex-md-row .align-items-center .gap-4}
+::::: {.card .shadow-sm .mb-4 .p-4 .rounded-4 .border-0 .bg-light .text-start}
+:::: {.d-flex .flex-column .flex-md-row .align-items-center .gap-4}
 
 ![](images/rf_lab.png){width="300px" style="height: 190px; object-fit: cover; border-radius: 14px; flex-shrink: 0;" alt="CRPA Testing Setup"}
 
 ::: {.flex-grow-1}
-::: {.text-uppercase .text-muted .fw-semibold style="font-size: 0.8rem; letter-spacing: 0.5px;"}
+<div class="text-uppercase text-muted fw-semibold" style="font-size: 0.8rem; letter-spacing: 0.5px;">
 AUG 2026 – PRESENT · HARVEY MUDD COLLEGE
-:::
+</div>
 
 <hr class="my-2 opacity-25">
 
 ### CRPA ANTENNA CHARACTERIZATION {.fw-bold .text-uppercase .mb-2 style="letter-spacing: 0.5px; font-size: 1.25rem;"}
 
-::: {.mb-2 .d-flex .flex-wrap .gap-1}
-[SDRs]{.badge .rounded-pill .bg-info-subtle .text-info-emphasis}
-[RF Testing]{.badge .rounded-pill .bg-info-subtle .text-info-emphasis}
-[MATLAB]{.badge .rounded-pill .bg-info-subtle .text-info-emphasis}
-[Signal Processing]{.badge .rounded-pill .bg-info-subtle .text-info-emphasis}
-:::
+<div class="mb-2 d-flex flex-wrap gap-1">
+  <span class="badge rounded-pill bg-info-subtle text-info-emphasis border border-info-subtle">SDRs</span>
+  <span class="badge rounded-pill bg-info-subtle text-info-emphasis border border-info-subtle">RF Testing</span>
+  <span class="badge rounded-pill bg-info-subtle text-info-emphasis border border-info-subtle">MATLAB</span>
+  <span class="badge rounded-pill bg-info-subtle text-info-emphasis border border-info-subtle">Signal Processing</span>
+</div>
 
 Leading SDR signal processing to test and characterize a Controlled Reception Pattern Antenna (CRPA) array for anti-jamming performance and null steering.
 
 [View Project →](projects/crpa-characterization.qmd){.btn .btn-primary .rounded-pill .btn-sm .mt-2 role="button"}
 :::
 
-:::
-:::
+::::
+:::::
 
-::: {.card .shadow-sm .mb-4 .p-4 .rounded-4 .border-0 .bg-light .text-start}
-::: {.d-flex .flex-column .flex-md-row .align-items-center .gap-4}
+::::: {.card .shadow-sm .mb-4 .p-4 .rounded-4 .border-0 .bg-light .text-start}
+:::: {.d-flex .flex-column .flex-md-row .align-items-center .gap-4}
 
 ![](images/E80_auv.png){width="300px" style="height: 190px; object-fit: cover; border-radius: 14px; flex-shrink: 0;" alt="Autonomous Diving Robot"}
 
 ::: {.flex-grow-1}
-::: {.text-uppercase .text-muted .fw-semibold style="font-size: 0.8rem; letter-spacing: 0.5px;"}
+<div class="text-uppercase text-muted fw-semibold" style="font-size: 0.8rem; letter-spacing: 0.5px;">
 SPRING 2026 · HARDWARE LEAD
-:::
+</div>
 
 <hr class="my-2 opacity-25">
 
 ### AUTONOMOUS UNDERWATER ROBOT {.fw-bold .text-uppercase .mb-2 style="letter-spacing: 0.5px; font-size: 1.25rem;"}
 
-::: {.mb-2 .d-flex .flex-wrap .gap-1}
-[Robotics]{.badge .rounded-pill .bg-info-subtle .text-info-emphasis}
-[Microcontrollers]{.badge .rounded-pill .bg-info-subtle .text-info-emphasis}
-[Sonar]{.badge .rounded-pill .bg-info-subtle .text-info-emphasis}
-[3D Mapping]{.badge .rounded-pill .bg-info-subtle .text-info-emphasis}
-:::
+<div class="mb-2 d-flex flex-wrap gap-1">
+  <span class="badge rounded-pill bg-info-subtle text-info-emphasis border border-info-subtle">Robotics</span>
+  <span class="badge rounded-pill bg-info-subtle text-info-emphasis border border-info-subtle">Microcontrollers</span>
+  <span class="badge rounded-pill bg-info-subtle text-info-emphasis border border-info-subtle">Sonar</span>
+  <span class="badge rounded-pill bg-info-subtle text-info-emphasis border border-info-subtle">3D Mapping</span>
+</div>
 
 Designed and fabricated an autonomous underwater vehicle equipped with custom sonar and sensor fusion for high-resolution bathymetric floor mapping.
 
 [View Project →](projects/autonomous-submersible.qmd){.btn .btn-primary .rounded-pill .btn-sm .mt-2 role="button"}
 :::
 
-:::
-:::
+::::
+:::::
 
-::: {.card .shadow-sm .mb-4 .p-4 .rounded-4 .border-0 .bg-light .text-start}
-::: {.d-flex .flex-column .flex-md-row .align-items-center .gap-4}
+::::: {.card .shadow-sm .mb-4 .p-4 .rounded-4 .border-0 .bg-light .text-start}
+:::: {.d-flex .flex-column .flex-md-row .align-items-center .gap-4}
 
 ![](images/airfilter.png){width="300px" style="height: 190px; object-fit: cover; border-radius: 14px; flex-shrink: 0;" alt="Smart Air Purifier Prototype"}
 
 ::: {.flex-grow-1}
-::: {.text-uppercase .text-muted .fw-semibold style="font-size: 0.8rem; letter-spacing: 0.5px;"}
+<div class="text-uppercase text-muted fw-semibold" style="font-size: 0.8rem; letter-spacing: 0.5px;">
 SUMMER 2026 · LILAQ RESEARCH
-:::
+</div>
 
 <hr class="my-2 opacity-25">
 
 ### SMART HIGH-CADR AIR PURIFIER {.fw-bold .text-uppercase .mb-2 style="letter-spacing: 0.5px; font-size: 1.25rem;"}
 
-::: {.mb-2 .d-flex .flex-wrap .gap-1}
-[Embedded Systems]{.badge .rounded-pill .bg-info-subtle .text-info-emphasis}
-[Sensors]{.badge .rounded-pill .bg-info-subtle .text-info-emphasis}
-[C/C++]{.badge .rounded-pill .bg-info-subtle .text-info-emphasis}
-[Prototyping]{.badge .rounded-pill .bg-info-subtle .text-info-emphasis}
-:::
+<div class="mb-2 d-flex flex-wrap gap-1">
+  <span class="badge rounded-pill bg-info-subtle text-info-emphasis border border-info-subtle">Embedded Systems</span>
+  <span class="badge rounded-pill bg-info-subtle text-info-emphasis border border-info-subtle">Sensors</span>
+  <span class="badge rounded-pill bg-info-subtle text-info-emphasis border border-info-subtle">C/C++</span>
+  <span class="badge rounded-pill bg-info-subtle text-info-emphasis border border-info-subtle">Prototyping</span>
+</div>
 
 Engineered a custom DIY air purification system that outperforms commercial off-the-shelf units in Clean Air Delivery Rate (CADR) at a fraction of the cost.
 
 [View Project →](projects/smart-air-purifier.qmd){.btn .btn-primary .rounded-pill .btn-sm .mt-2 role="button"}
 :::
 
-:::
-:::
-
-## Coursework
-
-- **Microprocessor System Design (E155):** 7 custom FPGA & ARM Cortex-M hardware labs featuring SystemVerilog, SPI/I2C, and custom peripherals. [View Labs →](Lab7.qmd)
+::::
+:::::
