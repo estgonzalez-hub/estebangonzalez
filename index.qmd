@@ -19,56 +19,92 @@ I am a Junior Engineering student at Harvey Mudd College passionate about electr
 
 ## Projects
 
-```{=html}
-<div class="project-list">
+::::::: {.project-card}
 
-  <article class="project-card">
-    <div class="project-img">
-      <img src="images/rf_lab.png" alt="CRPA Testing Setup">
-    </div>
-    <div class="project-body">
-      <div class="project-date">Aug 2026 – Present · Harvey Mudd College</div>
-      <hr>
-      <h3 class="project-title">CRPA Antenna Characterization</h3>
-      <div class="project-tags">
-        <span>SDRs</span><span>RF Testing</span><span>MATLAB</span><span>Signal Processing</span>
-      </div>
-      <p>Leading SDR signal processing to test and characterize a Controlled Reception Pattern Antenna (CRPA) array for anti-jamming performance and null steering.</p>
-      <a class="project-btn" href="projects/crpa-characterization.html">View More</a>
-    </div>
-  </article>
+:::::: {.project-img}
 
-  <article class="project-card">
-    <div class="project-img">
-      <img src="images/E80_auv.png" alt="Autonomous Diving Robot">
-    </div>
-    <div class="project-body">
-      <div class="project-date">Spring 2026 · Hardware Lead</div>
-      <hr>
-      <h3 class="project-title">Autonomous Underwater Robot</h3>
-      <div class="project-tags">
-        <span>Robotics</span><span>Microcontrollers</span><span>Sonar</span><span>3D Mapping</span>
-      </div>
-      <p>Designed and fabricated an autonomous underwater vehicle equipped with custom sonar and sensor fusion for high-resolution bathymetric floor mapping.</p>
-      <a class="project-btn" href="projects/autonomous-submersible.html">View More</a>
-    </div>
-  </article>
+![](images/rf_lab.png){fig-alt="CRPA Testing Setup"}
 
-  <article class="project-card">
-    <div class="project-img">
-      <img src="images/airfilter.png" alt="Smart Air Purifier Prototype">
-    </div>
-    <div class="project-body">
-      <div class="project-date">Summer 2026 · LILAQ Research</div>
-      <hr>
-      <h3 class="project-title">Smart High-CADR Air Purifier</h3>
-      <div class="project-tags">
-        <span>Embedded Systems</span><span>Sensors</span><span>C/C++</span><span>Prototyping</span>
-      </div>
-      <p>Engineered a custom DIY air purification system that outperforms commercial off-the-shelf units in Clean Air Delivery Rate (CADR) at a fraction of the cost.</p>
-      <a class="project-btn" href="projects/smart-air-purifier.html">View More</a>
-    </div>
-  </article>
+::::::
 
-</div>
-```
+:::::: {.project-body}
+
+::::: {.project-date}
+Aug 2026 – Present · Harvey Mudd College
+:::::
+
+::::: {.project-title}
+CRPA Antenna Characterization
+:::::
+
+::::: {.project-tags}
+[SDRs]{.tag} [RF Testing]{.tag} [MATLAB]{.tag} [Signal Processing]{.tag}
+:::::
+
+Leading SDR signal processing to test and characterize a Controlled Reception Pattern Antenna (CRPA) array for anti-jamming performance and null steering.
+
+[View More](projects/crpa-characterization.qmd){.project-btn}
+
+::::::
+
+:::::::
+
+::::::: {.project-card}
+
+:::::: {.project-img}
+
+![](images/E80_auv.png){fig-alt="Autonomous Diving Robot"}
+
+::::::
+
+:::::: {.project-body}
+
+::::: {.project-date}
+Spring 2026 · Hardware Lead
+:::::
+
+::::: {.project-title}
+Autonomous Underwater Robot
+:::::
+
+::::: {.project-tags}
+[Robotics]{.tag} [Microcontrollers]{.tag} [Sonar]{.tag} [3D Mapping]{.tag}
+:::::
+
+Designed and fabricated an autonomous underwater vehicle equipped with custom sonar and sensor fusion for high-resolution bathymetric floor mapping.
+
+[View More](projects/autonomous-submersible.qmd){.project-btn}
+
+::::::
+
+:::::::
+
+::::::: {.project-card}
+
+:::::: {.project-img}
+
+![](images/airfilter.png){fig-alt="Smart Air Purifier Prototype"}
+
+::::::
+
+:::::: {.project-body}
+
+::::: {.project-date}
+Summer 2026 · LILAQ Research
+:::::
+
+::::: {.project-title}
+Smart High-CADR Air Purifier
+:::::
+
+::::: {.project-tags}
+[Embedded Systems]{.tag} [Sensors]{.tag} [C/C++]{.tag} [Prototyping]{.tag}
+:::::
+
+Engineered a custom DIY air purification system that outperforms commercial off-the-shelf units in Clean Air Delivery Rate (CADR) at a fraction of the cost.
+
+[View More](projects/smart-air-purifier.qmd){.project-btn}
+
+::::::
+
+:::::::
