@@ -23,7 +23,7 @@ I am a Junior Engineering student at Harvey Mudd College passionate about electr
 ::: {.card .shadow-sm .mb-3 .p-3 .text-start}
 ::: {.d-flex .flex-column .flex-md-row .align-items-center .gap-3}
 
-![](images/rf_lab.png){width="280px" style="height: 180px; object-fit: cover; border-radius: 8px; flex-shrink: 0;" alt="CRPA Testing Setup"}
+![](images/rf_lab.png){width="480px" style="height: 380px; object-fit: cover; border-radius: 8px; flex-shrink: 0;" alt="CRPA Testing Setup"}
 
 ::: {.flex-grow-1}
 ### CRPA Antenna Characterization {.mb-1}
@@ -43,7 +43,7 @@ Leading SDR signal processing to test and characterize a Controlled Reception Pa
 ::: {.card .shadow-sm .mb-3 .p-3 .text-start}
 ::: {.d-flex .flex-column .flex-md-row .align-items-center .gap-3}
 
-![](images/E80_auv.png){width="280px" style="height: 180px; object-fit: cover; border-radius: 8px; flex-shrink: 0;" alt="Autonomous Diving Robot"}
+![](images/E80_auv.png){width="480px" style="height: 380px; object-fit: cover; border-radius: 8px; flex-shrink: 0;" alt="Autonomous Diving Robot"}
 
 ::: {.flex-grow-1}
 ### Autonomous Underwater Robot {.mb-1}
@@ -63,7 +63,7 @@ Designed and fabricated an autonomous robot capable of both surface navigation a
 ::: {.card .shadow-sm .mb-3 .p-3 .text-start}
 ::: {.d-flex .flex-column .flex-md-row .align-items-center .gap-3}
 
-![](images/airfilter.png){width="280px" style="height: 180px; object-fit: cover; border-radius: 8px; flex-shrink: 0;" alt="Smart Air Purifier Prototype"}
+![](images/airfilter.png){width="480px" style="height: 380px; object-fit: cover; border-radius: 8px; flex-shrink: 0;" alt="Smart Air Purifier Prototype"}
 
 ::: {.flex-grow-1}
 ### Smart High-CADR Indoor Air Purifier {.mb-1}
