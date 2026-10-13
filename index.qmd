@@ -4,7 +4,7 @@ image: images/1.JPG
 toc: false
 about:
   id: hero
-  template: trestles
+  template: solana 
   image-shape: round
   image-width: 14em
   links:

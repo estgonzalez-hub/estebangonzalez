@@ -24,3 +24,24 @@
   background-color: var(--bs-info);
   color: #fff;
 }
+
+/* ---------- Hero / Projects separation ---------- */
+
+/* bold vertical divider between portrait and bio */
+.quarto-about-trestles .about-entity {
+  border-right: 4px solid var(--bs-info);
+}
+.quarto-about-trestles .about-contents {
+  border-left: none;
+  align-self: center;   /* centers the bio vertically beside the portrait */
+  padding-left: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* bold underline + space above the Projects heading */
+main h2 {
+  margin-top: 3.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 4px solid var(--bs-info);
+}
