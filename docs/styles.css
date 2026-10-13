@@ -57,9 +57,4 @@ main h2 {
   border-bottom: none;
 }
 
-/* bold blue bar on the left edge of the name/bio column */
-.about-entity {
-  border-left: 4px solid var(--bs-info) !important;
-  padding-left: 1.5rem !important;
-}
 
