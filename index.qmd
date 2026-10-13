@@ -3,9 +3,10 @@ title: "Esteban Gonzalez"
 image: images/1.JPG
 toc: false
 about:
-  template: jolla
+  id: hero
+  template: trestles
   image-shape: round
-  image-width: 12em
+  image-width: 14em
   links:
     - icon: linkedin
       text: LinkedIn
@@ -15,7 +16,9 @@ about:
       href: https://github.com/estgonzalez-hub/Micro_Ps
 ---
 
+::: {#hero}
 I am a Junior Engineering student at Harvey Mudd College passionate about electrical engineering and hardware design. My technical interests range from digital system design with microprocessors and FPGAs to Radio Frequency circuitry and signal processing.
+:::
 
 ## Projects
 
