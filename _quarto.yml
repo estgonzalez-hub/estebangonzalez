@@ -21,19 +21,19 @@ website:
             href: air_purifier.qmd
       - text: "FPGA & MCU Projects"
         menu:
-          - text: "Lab 1: Soldering & FPGA"
+          - text: "Project 1: Soldering & FPGA"
             href: Lab1.qmd
-          - text: "Lab 2: FPGA SPI Interface"
+          - text: "Project 2: Multiplexed 7-Segment Displa"
             href: Lab2.qmd
-          - text: "Lab 3: Keypad & LED Driver"
+          - text: "Project 3: Keypad & LED Driver"
             href: Lab3.qmd
-          - text: "Lab 4: Audio DAC & PWM"
+          - text: "Project 4: Audio DAC & PWM"
             href: Lab4.qmd
-          - text: "Lab 5: Interrupts"
+          - text: "Project 5: Interrupts"
             href: Lab5.qmd
-          - text: "Lab 6"
+          - text: "Project 6: IoT and SPI"
             href: Lab6.qmd
-          - text: "Lab 7 "
+          - text: "Project 7:The Advanced Encryption Standard (AES)"
             href: Lab7.qmd
       - href: Esteban_Gonzalez_Resume.pdf
         text: Resume
