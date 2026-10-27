@@ -119,10 +119,10 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-e155-labs" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">E155 Labs</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fpga--mcu-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">FPGA &amp; MCU Projects</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-e155-labs">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-fpga--mcu-projects">    
         <li>
     <a class="dropdown-item" href="./Lab1.html">
  <span class="dropdown-text">Lab 1: Soldering &amp; FPGA</span></a>
@@ -181,7 +181,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#lab-7---the-advanced-encryption-standard-aes" id="toc-lab-7---the-advanced-encryption-standard-aes" class="nav-link active" data-scroll-target="#lab-7---the-advanced-encryption-standard-aes">Lab 7 - The Advanced Encryption Standard (AES)</a></li>
+  <li><a href="#lab-7---the-advanced-encryption-standard-aes" id="toc-lab-7---the-advanced-encryption-standard-aes" class="nav-link active" data-scroll-target="#lab-7---the-advanced-encryption-standard-aes">Lab 7 - The Advanced Encryption Standard (AES)</a>
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#design-and-testing-methodology" id="toc-design-and-testing-methodology" class="nav-link" data-scroll-target="#design-and-testing-methodology">Design and Testing Methodology</a></li>
+  <li><a href="#block-diagrams" id="toc-block-diagrams" class="nav-link" data-scroll-target="#block-diagrams">Block Diagrams</a></li>
+  <li><a href="#testbench-simulation" id="toc-testbench-simulation" class="nav-link" data-scroll-target="#testbench-simulation">Testbench Simulation</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#ai-prototype-summary" id="toc-ai-prototype-summary" class="nav-link" data-scroll-target="#ai-prototype-summary">AI Prototype Summary</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -193,9 +201,70 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="lab-7---the-advanced-encryption-standard-aes" class="level2">
 <h2 class="anchored" data-anchor-id="lab-7---the-advanced-encryption-standard-aes">Lab 7 - The Advanced Encryption Standard (AES)</h2>
-<p>Description of Lab 7.</p>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>In this lab, a hardware accelerator was built in order to perfom 128-bit AES encryption. The STM32 sends a plaintext and key to the FPGA using SPI. The FPGA then cyhpers the text and sends it back to the MCU and confirms it was cyphered correctly.</p>
+</section>
+<section id="design-and-testing-methodology" class="level3">
+<h3 class="anchored" data-anchor-id="design-and-testing-methodology">Design and Testing Methodology</h3>
+<p>The AES encryption was implemented using 14 systemverilog modules and one C source file for the STM32 MCU. For the FPGA, the control and datapath logic are kept separate. The top module aes instantiates both of them.</p>
+<p>The source code for the project can be found in the associated <a href="https://github.com/estgonzalez-hub/Micro_Ps">Github repository</a></p>
+</section>
+<section id="block-diagrams" class="level3">
+<h3 class="anchored" data-anchor-id="block-diagrams">Block Diagrams</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/lab7.jpg" class="img-fluid figure-img"></p>
+<figcaption>Blockdiagram</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/lab7_.jpg" class="img-fluid figure-img"></p>
+<figcaption>Blockdiagram</figcaption>
+</figure>
+</div>
+</section>
+<section id="testbench-simulation" class="level3">
+<h3 class="anchored" data-anchor-id="testbench-simulation">Testbench Simulation</h3>
+<p>The design met all intended design objectives. A testbench was created to test each module as it was created. The waveforms for the modules are provided</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/top_tb_lab3.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 4. Waveform showing the top module being tested</figcaption>
+</figure>
+</div>
+<p>The screenshot above shows the QuestaSim simulation for the top module.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/debounce_tb_lab3.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 5. Waveform showing the seven segment display being tested</figcaption>
+</figure>
+</div>
+<p>The screenshot above shows the QuestaSim simulation for the debounce module.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/key_press_tb_lab3.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 6. Waveform showing the seven segment display being tested</figcaption>
+</figure>
+</div>
+<p>The screenshot above shows the QuestaSim simulation for the keypress module.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/number_assign_tb_lab3.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 7. Waveform showing the seven segment display being tested</figcaption>
+</figure>
+</div>
+<p>The screenshot above shows the QuestaSim simulation for the debounce module.</p>
+</section>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+</section>
+<section id="ai-prototype-summary" class="level3">
+<h3 class="anchored" data-anchor-id="ai-prototype-summary">AI Prototype Summary</h3>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

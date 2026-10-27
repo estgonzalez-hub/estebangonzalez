@@ -1,3 +1,58 @@
 ## Lab 7 - The Advanced Encryption Standard (AES)
 
-Description of Lab 7.
+### Introduction
+
+In this lab, a hardware accelerator was built in order to perfom 128-bit AES encryption. The STM32 sends a plaintext and key to the FPGA using SPI. The FPGA then cyhpers the text and sends it back to the MCU and confirms it was cyphered correctly. 
+
+### Design and Testing Methodology
+
+The AES encryption was implemented using 14 systemverilog modules and one C source file for the STM32 MCU. For the FPGA, the control and datapath logic are kept separate. The top module aes instantiates both of them. 
+
+
+
+The source code for the project can be found in the associated
+[Github repository](https://github.com/estgonzalez-hub/Micro_Ps)
+
+
+
+### Block Diagrams 
+
+![Blockdiagram](images/lab7.jpg){fig-cap="Figure 1. "}
+
+
+
+![Blockdiagram](images/lab7_.jpg){fig-cap="Figure 2. "}
+
+
+
+### Testbench Simulation
+
+The design met all intended design objectives. A testbench was created to test each module as it was created. The waveforms for the modules are provided 
+
+![Figure 4. Waveform showing the top module being tested](images/top_tb_lab3.png){fig-cap="Figure 3. Waveform showing the top module being tested"}
+
+
+The screenshot above shows the QuestaSim simulation for the top module. 
+
+![Figure 5. Waveform showing the seven segment display being tested](images/debounce_tb_lab3.png){fig-cap="Figure 4. Waveform showing the debounce module being tested."}
+
+
+The screenshot above shows the QuestaSim simulation for the debounce module. 
+
+![Figure 6. Waveform showing the seven segment display being tested](images/key_press_tb_lab3.png){fig-cap="Figure 5. Waveform showing the key press module being tested."}
+
+
+The screenshot above shows the QuestaSim simulation for the keypress module. 
+
+![Figure 7. Waveform showing the seven segment display being tested](images/number_assign_tb_lab3.png){fig-cap="Figure 4. Waveform showing the number assign module being tested."}
+
+
+The screenshot above shows the QuestaSim simulation for the debounce module.
+
+### Conclusion
+
+
+
+
+### AI Prototype Summary
+

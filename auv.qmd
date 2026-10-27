@@ -1,0 +1,25 @@
+---
+title: "Autonomous Underwater Robot"
+description: "Designed and fabricated an autonomous underwater vehicle with custom sonar and sensor fusion for high-resolution bathymetric floor mapping."
+---
+
+## Abstract
+
+This paper presents the design, deployment, and results of an autonomous underwater vehicle (AUV) used to map the underwater topography of Dana Point Harbor and characterize the temperature-depth relationship of the water body. The AUV was equipped with a sonar sensor consisting of a speaker and microphone for depth measurement, a thermistor for temperature sensing, and a pressure sensor for depth navigation. 
+
+The AUV was deployed at two sites: pHake Lake for initial testing and Dana Point Harbor for final data collection. Despite issues with GPS module accuracy, the team successfully post-processed sonar data to reconstruct accurate harbor floor depth profiles. Measured floor depths were consistent with published harbor survey data from the Dana Point Harbor Authority, with an error of about 0.1 m across the mapped area. The AUV dived to a depth of 3 meters, confirming that temperature decreases with depth (the lowest recorded temperature of 18.3°C closely matched our control thermometer at 18.15°C).
+
+---
+
+## Introduction
+
+Understanding the underwater topography and thermal structure of coastal environments is essential for a wide range of oceanographic applications. Ocean currents—which are influenced by temperature gradients and seafloor geometry—play a fundamental role in heat transport, nutrient cycling, and the distribution of marine species [1]. 
+
+As ocean temperatures rise due to anthropogenic climate change, the thermal stratification of coastal waters is intensifying. This has direct consequences for dissolved oxygen levels, marine biodiversity, and the overall health of reef ecosystems [2]. Accurate, high-resolution measurements of temperature and depth are therefore critical for monitoring these changes and informing conservation efforts.
+
+### Project Goals
+1. **Topographical Mapping:** Map the underwater topography of Dana Point Harbor using acoustic time-of-flight sonar to produce a depth profile of the harbor floor.
+2. **Thermal Profiling:** Characterize the temperature-depth relationship within the water column, quantifying any thermal stratification present at the deployment site.
+
+These measurements were carried out using a custom-built AUV capable of autonomous diving and surface navigation. The AUV was equipped with three primary sensors: a sonar transceiver for acoustic range finding, a thermistor circuit for water temperature measurement, and a pressure sensor.
+

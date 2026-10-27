@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Leading SDR signal processing to test and characterize a Controlled Reception Pattern Antenna (CRPA) array for anti-jamming performance and null steering.">
 
-<title>crpa_charecterization – Esteban Gonzalez</title>
+<title>CRPA Antenna Characterization – Esteban Gonzalez</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -74,6 +75,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -119,10 +149,10 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-e155-labs" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">E155 Labs</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fpga--mcu-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">FPGA &amp; MCU Projects</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-e155-labs">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-fpga--mcu-projects">    
         <li>
     <a class="dropdown-item" href="./Lab1.html">
  <span class="dropdown-text">Lab 1: Soldering &amp; FPGA</span></a>
@@ -176,17 +206,158 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction-project-overview" id="toc-introduction-project-overview" class="nav-link active" data-scroll-target="#introduction-project-overview">Introduction &amp; Project Overview</a>
+  <ul class="collapse">
+  <li><a href="#problem-statement" id="toc-problem-statement" class="nav-link" data-scroll-target="#problem-statement">Problem Statement</a></li>
+  <li><a href="#gps-antenna-characterization" id="toc-gps-antenna-characterization" class="nav-link" data-scroll-target="#gps-antenna-characterization">GPS Antenna Characterization</a></li>
+  </ul></li>
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a>
+  <ul class="collapse">
+  <li><a href="#purpose-and-scope" id="toc-purpose-and-scope" class="nav-link" data-scroll-target="#purpose-and-scope">Purpose and Scope</a></li>
+  <li><a href="#antenna-fundamentals" id="toc-antenna-fundamentals" class="nav-link" data-scroll-target="#antenna-fundamentals">Antenna Fundamentals</a></li>
+  <li><a href="#gpsgnss-antenna-fundamentals" id="toc-gpsgnss-antenna-fundamentals" class="nav-link" data-scroll-target="#gpsgnss-antenna-fundamentals">GPS/GNSS Antenna Fundamentals</a></li>
+  <li><a href="#measurement-and-test-range-concepts" id="toc-measurement-and-test-range-concepts" class="nav-link" data-scroll-target="#measurement-and-test-range-concepts">Measurement and Test Range Concepts</a></li>
+  <li><a href="#sdr-and-positioner-integration" id="toc-sdr-and-positioner-integration" class="nav-link" data-scroll-target="#sdr-and-positioner-integration">SDR and Positioner Integration</a></li>
+  </ul></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a>
+  <ul class="collapse">
+  <li><a href="#tp-link-test-results" id="toc-tp-link-test-results" class="nav-link" data-scroll-target="#tp-link-test-results">TP-Link Test Results</a></li>
+  <li><a href="#range-calibration" id="toc-range-calibration" class="nav-link" data-scroll-target="#range-calibration">Range &amp; Calibration</a></li>
+  <li><a href="#sdr-positioners" id="toc-sdr-positioners" class="nav-link" data-scroll-target="#sdr-positioners">SDR &amp; Positioners</a></li>
+  </ul></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a>
+  <ul class="collapse">
+  <li><a href="#tp-link-test-results-1" id="toc-tp-link-test-results-1" class="nav-link" data-scroll-target="#tp-link-test-results-1">TP-Link Test Results</a></li>
+  <li><a href="#frpa-results" id="toc-frpa-results" class="nav-link" data-scroll-target="#frpa-results">FRPA Results</a></li>
+  <li><a href="#sdr-measurements-vs.-vna" id="toc-sdr-measurements-vs.-vna" class="nav-link" data-scroll-target="#sdr-measurements-vs.-vna">SDR Measurements vs.&nbsp;VNA</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">CRPA Antenna Characterization</h1>
+</div>
+
+<div>
+  <div class="description">
+    Leading SDR signal processing to test and characterize a Controlled Reception Pattern Antenna (CRPA) array for anti-jamming performance and null steering.
+  </div>
+</div>
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
+</header>
 
 
+<section id="introduction-project-overview" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-project-overview">Introduction &amp; Project Overview</h2>
+<p>Every aircraft in the sky relies on the Global Positioning System (GPS) to know its location. However, the signals which GPS satellites transmit are extremely weak and are susceptible to various forms of interference. On behalf of the FAA and Aerospace Corporation, our team is characterizing a new type of GPS antenna.</p>
+<section id="problem-statement" class="level3">
+<h3 class="anchored" data-anchor-id="problem-statement">Problem Statement</h3>
+<p>The Global Positioning System is an essential part of our world today. Data from GPS timing dictates financial markets, power grids, and transit. In civil aviation, GPS supports precision approaches and system navigation, so it is a nontrivial ordeal when these services go offline.</p>
+<p>Reports of GPS interference affecting commercial aircraft have risen sharply over recent years. New conflicts across the globe have also accelerated GPS interference technology, mainly in the form of jamming. A jamming attack consists of transmitting radio-frequency energy at GPS frequencies, overpowering the extremely weak satellite signals.</p>
+<p>Airplanes currently use Fixed Reception Pattern Antennas (FRPAs), which receive signals from the entire spatial spectrum. Controlled Reception Pattern Antennas (CRPAs) use an array of elements whose signal can be combined to place nulls in the direction of interference. The CRPA recently had its ITAR restriction taken away, so the door is now open to use CRPAs for civil aviation.</p>
+<p>Manufacturers, regulators, and airlines need trustworthy performance data to evaluate CRPAs and their potential implementation. Commercially available datasheets often omit the testing conditions behind their published numbers. By creating a process to produce this data and document how we conduct measurements, we aim to fill this gap. The purpose of this study is to encourage the spread of CRPAs into civil aviation. In the long run, wider CRPA adoption would make civil aircraft significantly more resilient to jamming attacks.</p>
+</section>
+<section id="gps-antenna-characterization" class="level3">
+<h3 class="anchored" data-anchor-id="gps-antenna-characterization">GPS Antenna Characterization</h3>
+<p>Characterizing a GPS antenna means we have to measure its gain as a function of elevation and azimuth, its polarization purity, and its phase response. For a multi-element antenna like a CRPA, we must measure its elements individually. These quantities determine how well an antenna can reject interference.</p>
+<p>Beginning with a single-element FRPA, these antennas are well documented, so comparing our measurements against known results lets us validate the test setup.</p>
+<hr>
+</section>
+</section>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<section id="purpose-and-scope" class="level3">
+<h3 class="anchored" data-anchor-id="purpose-and-scope">Purpose and Scope</h3>
+<p>To understand the methodologies used to characterize the antennas provided by The Aerospace Corporation and the FAA, it is necessary to establish an understanding of antenna radiation, GPS signal characteristics, and radio frequency measurement techniques.</p>
+</section>
+<section id="antenna-fundamentals" class="level3">
+<h3 class="anchored" data-anchor-id="antenna-fundamentals">Antenna Fundamentals</h3>
+<p>An antenna’s performance is defined by how it directs and receives electromagnetic energy in three-dimensional space. The radiation pattern illustrates this directionality, with gain representing the antenna’s efficiency and directional focus. Key metrics include directivity, which measures how concentrated the beam is, and beamwidth, which defines the angular span of the primary signal.</p>
+<p>Signal polarization describes the orientation of the electromagnetic wave’s field. Understanding the boundary between the near-field and far-field is important for accurate measurements, as true radiation patterns only stabilize in the far-field (<span class="math inline">\(d \ge \frac{2D^2}{\lambda}\)</span>). In more advanced setups, phased arrays use multiple individual antenna elements to electronically steer the beam or create intentional signal voids known as nulls.</p>
+</section>
+<section id="gpsgnss-antenna-fundamentals" class="level3">
+<h3 class="anchored" data-anchor-id="gpsgnss-antenna-fundamentals">GPS/GNSS Antenna Fundamentals</h3>
+<p>GPS antennas must capture weak signals across specific frequency bands using right-hand circular polarization. Maintaining a low axial ratio and adequate gain at low elevation angles ensures the antenna can reliably track satellites near the horizon. Commercial aircraft standardly use FRPAs, which act as a baseline, single-element receiver with a fixed hemispherical pattern. CRPAs are multi-element arrays capable of suppressing interference by steering nulls directly toward jammers. Characterizing CRPAs requires testing to evaluate phase and amplitude matching between channels at both the element and array levels.</p>
+</section>
+<section id="measurement-and-test-range-concepts" class="level3">
+<h3 class="anchored" data-anchor-id="measurement-and-test-range-concepts">Measurement and Test Range Concepts</h3>
+<p>Benchtop RF measurements evaluate the fundamental properties of the antenna, capturing S-parameters and voltage standing wave ratio (VSWR) via a Vector Network Analyzer (VNA) to determine effective RF power delivery. To measure spatial properties without environmental interruption, testing occurs in an anechoic chamber, which uses RF-absorbing foam to eliminate multipath interference and reflections.</p>
+</section>
+<section id="sdr-and-positioner-integration" class="level3">
+<h3 class="anchored" data-anchor-id="sdr-and-positioner-integration">SDR and Positioner Integration</h3>
+<p>While a VNA provides high precision measurements, evaluating the null-steering of a CRPA requires multi-channel receivers. Software Defined Radios (SDRs) fulfill this role, acting as customizable signal sources and receivers that process RF data digitally. A mechanical positioner aligns the antenna in azimuth, elevation, and roll, sweeping it through specific angular steps to accurately map data to the physical orientation of the Device Under Test (DUT).</p>
+<hr>
+</section>
+</section>
+<section id="methods" class="level2">
+<h2 class="anchored" data-anchor-id="methods">Methods</h2>
+<section id="tp-link-test-results" class="level3">
+<h3 class="anchored" data-anchor-id="tp-link-test-results">TP-Link Test Results</h3>
+<p>Before characterizing the provided GPS antennas, the team tested commercially available antennas such as the TP-Link. This provided a known reference against manufacturer datasheets to develop a testing methodology.</p>
+<p>The TP-Link antenna was mounted inside the anechoic chamber and connected to a VNA. A calibrated horn antenna was used as the transmitting antenna. The VNA measured the transmission coefficient (<span class="math inline">\(S_{21}\)</span>) between the transmitting and receiving antennas across a sweep of 2.1 GHz to 2.8 GHz. The antenna was rotated through a series of angular positions to collect gain data, which was processed in MATLAB to generate 2D radiation patterns.</p>
+</section>
+<section id="range-calibration" class="level3">
+<h3 class="anchored" data-anchor-id="range-calibration">Range &amp; Calibration</h3>
+<p>All measurements were conducted in the 1x1x3 m³ anechoic chamber at Harvey Mudd College. The separation distance of 1.4 m ensured testing occurred in the far-field region.</p>
+</section>
+<section id="sdr-positioners" class="level3">
+<h3 class="anchored" data-anchor-id="sdr-positioners">SDR &amp; Positioners</h3>
+<p>The HackRF One and the USRP x310 were used alongside GNU Radio to characterize the FRPA and CRPA. This allowed for customization of sampling rates, LNA gain, and bandwidth to conduct tests unattainable with just a VNA (e.g., null tests, SNR, beam steering).</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>TODO: Positioner &amp; FRPA Details</strong> - Selected positioner and reasoning (Appendix B summary) - Control interface and integration with the measurement software - Angular step size, range of motion, timing per sweep - FRPA used and setup on the range - Recorded metrics: pattern cuts, gain, axial ratio, return loss</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<section id="tp-link-test-results-1" class="level3">
+<h3 class="anchored" data-anchor-id="tp-link-test-results-1">TP-Link Test Results</h3>
+<p>The first test measured the reflection coefficient in open air. We expected a decline in reflection coefficient at the transmitting frequencies of 2.4–2.5 GHz (at least -10dB return loss). At 2.4 GHz the return loss was about -20dB, and it remained under -10dB from 2.38 GHz–2.5 GHz, confirming proper VNA calibration.</p>
+<p>The antenna gain was calculated using the Friis equation: <span class="math display">\[ G_{rx} = P_{rx} - P_{tx} - G_{tx} - 20\log_{10}\left(\frac{\lambda}{4\pi d}\right) \]</span> <em>(Where <span class="math inline">\(G_{tx}\)</span> is the calibration antenna gain, <span class="math inline">\(G_{rx}\)</span> is the patch antenna gain, <span class="math inline">\(d\)</span> is the distance between phase centers, and <span class="math inline">\(\lambda\)</span> is the wavelength).</em></p>
+<p>Using the Schwarzbeck calibration antenna (far-field gain of 12.49 dBi at 2.4 GHz) and a distance <span class="math inline">\(d = 1.45\)</span> m, the measured peak gain initially read 6.3 dBi (short of the 9 dBi expected). After realigning the vertical phase centers and adjusting <span class="math inline">\(d\)</span> to 1.4 m, we calculated a boresight gain of 8.34 dBi at 2.4 GHz, and a peak gain of 9.3 dBi at 2.475 GHz—successfully achieving the datasheet’s specification.</p>
+</section>
+<section id="frpa-results" class="level3">
+<h3 class="anchored" data-anchor-id="frpa-results">FRPA Results</h3>
+<p>The pattern was measured at 1.575 GHz (GPS L1 band). Initial manual trials showed a discontinuity at 270° broadside, likely due to human imprecision and strain on the SMA cable during 360-degree rotation. The datasheet pattern was measured with a circularly polarized signal, while our Schwarzbeck antenna is linearly polarized, resulting in a ~3dB power loss.</p>
+<p>To investigate an unexpected rear lobe, we implemented a ground plane to block waves from reaching the far wall.</p>
+</section>
+<section id="sdr-measurements-vs.-vna" class="level3">
+<h3 class="anchored" data-anchor-id="sdr-measurements-vs.-vna">SDR Measurements vs.&nbsp;VNA</h3>
+<p>The first SDR trial showed a similar radiation pattern to the VNA manual measurements, retaining the 270° SMA cable strain anomaly. Future trials will implement cable strain relief and automated turntables to alleviate human positioning errors and optimize sweep times.</p>
+
+
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -1,0 +1,81 @@
+---
+title: "Smart High-CADR Air Purifier"
+description: "Engineered a custom DIY air purification system that outperforms commercial units in Clean Air Delivery Rate (CADR) at a fraction of the cost."
+---
+
+## Introduction
+
+During the Summer of 2026, I conducted research with LILAQ at Harvey Mudd College, an organization that investigates local air quality in Claremont with a focus on air quality communication and interventions. 
+
+My work focused on interventions addressing indoor particulate matter (PM). PM is a type of air pollution consisting of microscopic particles ranging from 10 μm to 0.1 μm. Prolonged exposure allows these particles to deposit deep into lung tissues, causing severe health effects. In Southern California, the biggest summer sources of PM2.5 are fireworks and wildfires. 
+
+While people assume staying indoors protects them, porous building envelopes, open windows, HVAC policies, and indoor cooking can release hazardous levels of PM2.5 into living spaces. A cost-effective way to address this is the Corsi-Rosenthal (CR) box. Invented during the COVID-19 pandemic, standard CR boxes are accessible but often loud and bulky. To address these downsides, I engineered a new CR box replacing the standard box fan with PC fans, resulting in a unit that is significantly quieter and slimmer.
+
+**Research Question:** *How effective is a PC fan CR box air filter at reducing indoor PM2.5 related to wildfires, fireworks, and summertime smog in LA?*
+
+---
+
+## Background
+
+The EPA sets 35 µg/m³ as the limit for safe exposure to PM2.5. A common issue with standard weather apps reporting the Air Quality Index (AQI) is that they report on a 12-hour average. Your phone might indicate the air is healthy when there are actually severe, localized spikes in pollution. Furthermore, many apps rely on algorithms rather than hyperlocal sensor data. 
+
+Monitoring hyperlocal air quality is crucial for public health. Accurate data allows the community to make informed decisions, aligning with LILAQ’s goal of increasing air quality literacy.
+
+---
+
+## Methodology
+
+The CR boxes were tested over three phases, starting with characterizing the performance of each individual unit inside Drinkward residence rooms. These rooms provided optimal insulation to ensure the building's HVAC system wouldn't significantly skew the PM decay rates.
+
+To simulate pollution, incense was lit for 1-2 minutes, raising PM levels to roughly 200 µg/m³ (simulating standard indoor cooking levels). PurpleAir sensors recorded the PM levels in the room and the hallway. Once the filter was turned on, the PM decay data was graphed and calculated to find the Clean Air Delivery Rate (CADR):
+
+$$ CADR = ACH \times V $$
+*(Where ACH is the air exchange per hour calculated from the decay lifetime $\tau$, and $V$ is the volume of the room).*
+
+### Drinkward Test Data
+
+| Air Filter Unit | Trial | Peak PM 2.5 (µg/m³) | Incense Burn Time | Decay Rate |
+| :--- | :---: | :---: | :---: | :---: |
+| **5-Fan Unit** | 1 | 355.00 | 2:57 | 186.84 |
+| **5-Fan Unit** | 2 | 224.75 | 1:10 | 172.80 |
+| **5-Fan Unit** | 3 | 217.50 | 1:11 | 169.56 |
+| **Unit 1** | 1 | 289.00 | 2:10 | 117.72 |
+| **Unit 1** | 2 | 186.20 | 1:12 | 122.04 |
+| **Unit 1** | 3 | 321.45 | 2:01 | 120.96 |
+| **Unit 2** | 1 | 248.20 | 1:30 | 116.64 |
+| **Unit 2** | 2 | 212.05 | 1:20 | 106.70 |
+| **Unit 2** | 3 | 283.35 | 1:20 | 110.16 |
+| **Unit 3** | 1 | 175.40 | 1:11 | 111.24 |
+| **Unit 3** | 2 | 181.50 | 1:20 | 113.40 |
+| **Unit 3** | 3 | 221.75 | 1:31 | 110.16 |
+| **Unit 4** | 1 | 496.00 | 4:32 | 112.30 |
+| **Unit 4** | 2 | 330.30 | 3:01 | 113.40 |
+| **Unit 4** | 3 | 313.55 | 1:20 | 113.40 |
+
+### Performance Averages vs Expected
+
+| Air Filter Unit | Average Decay Rate | Theoretical Decay Rate | 
+| :--- | :---: | :---: | 
+| **5-Fan Unit** | 176.25 | 264.0 CFM | 
+| **Unit 1** | 120.24 | 166.7 CFM | 
+| **Unit 2** | 111.17 | 166.7 CFM | 
+| **Unit 3** | 111.60 | 166.7 CFM | 
+| **Unit 4** | 113.03 | 166.7 CFM | 
+
+*(Note: Noise levels to be added)*
+
+### Holiday Deployment
+After characterization, the filters were deployed on the 4th of July across McGregor, Sprague, Olin, and Drinkward. Each location paired a filter-equipped room against a control room. The filters operated on a cycle (1 hour on, 2 hours off) to allow outside polluted air in, measuring the units' ability to rapidly clear real-world holiday pollution.
+
+---
+
+## Results & Discussion
+
+Testing demonstrated that the DIY PC-fan air filters are highly effective, successfully addressing indoor air quality related to wildfires, fireworks, and summertime smog. 
+
+Build precision (specifically duct-taping the seals) played a minor role in efficiency, but even the worst-performing units easily purified small rooms. The 5-fan unit was **46% to 58% more effective** than the 3-fan units. Overall, these DIY models matched the performance of commercial options while running drastically quieter. 
+
+The units are inexpensive and take approximately 5 hours to build (with 4.5 hours dedicated passively to 3D printing components). 
+
+### Future Work
+Future initiatives include collaborating with the makerspace to host workshops for the 7C community and publishing open-source templates. By sourcing recycled fans from campus departments, we can further drive down the unit cost. LILAQ is also developing a comprehensive dashboard to integrate this sensor data, providing actionable air quality suggestions to the local community.

@@ -19,7 +19,7 @@ website:
             href: auv.qmd
           - text: "Smart Air Purifier"
             href: air_purifier.qmd
-      - text: "E155 Labs"
+      - text: "FPGA & MCU Projects"
         menu:
           - text: "Lab 1: Soldering & FPGA"
             href: Lab1.qmd

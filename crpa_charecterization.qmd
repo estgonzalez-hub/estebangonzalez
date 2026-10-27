@@ -1,0 +1,89 @@
+---
+title: "CRPA Antenna Characterization"
+description: "Leading SDR signal processing to test and characterize a Controlled Reception Pattern Antenna (CRPA) array for anti-jamming performance and null steering."
+---
+
+## Introduction & Project Overview
+
+Every aircraft in the sky relies on the Global Positioning System (GPS) to know its location. However, the signals which GPS satellites transmit are extremely weak and are susceptible to various forms of interference. On behalf of the FAA and Aerospace Corporation, our team is characterizing a new type of GPS antenna. 
+
+### Problem Statement
+The Global Positioning System is an essential part of our world today. Data from GPS timing dictates financial markets, power grids, and transit. In civil aviation, GPS supports precision approaches and system navigation, so it is a nontrivial ordeal when these services go offline.
+
+Reports of GPS interference affecting commercial aircraft have risen sharply over recent years. New conflicts across the globe have also accelerated GPS interference technology, mainly in the form of jamming. A jamming attack consists of transmitting radio-frequency energy at GPS frequencies, overpowering the extremely weak satellite signals.
+
+Airplanes currently use Fixed Reception Pattern Antennas (FRPAs), which receive signals from the entire spatial spectrum. Controlled Reception Pattern Antennas (CRPAs) use an array of elements whose signal can be combined to place nulls in the direction of interference. The CRPA recently had its ITAR restriction taken away, so the door is now open to use CRPAs for civil aviation. 
+
+Manufacturers, regulators, and airlines need trustworthy performance data to evaluate CRPAs and their potential implementation. Commercially available datasheets often omit the testing conditions behind their published numbers. By creating a process to produce this data and document how we conduct measurements, we aim to fill this gap. The purpose of this study is to encourage the spread of CRPAs into civil aviation. In the long run, wider CRPA adoption would make civil aircraft significantly more resilient to jamming attacks. 
+
+### GPS Antenna Characterization
+Characterizing a GPS antenna means we have to measure its gain as a function of elevation and azimuth, its polarization purity, and its phase response. For a multi-element antenna like a CRPA, we must measure its elements individually. These quantities determine how well an antenna can reject interference.
+
+Beginning with a single-element FRPA, these antennas are well documented, so comparing our measurements against known results lets us validate the test setup. 
+
+---
+
+## Background
+
+### Purpose and Scope
+To understand the methodologies used to characterize the antennas provided by The Aerospace Corporation and the FAA, it is necessary to establish an understanding of antenna radiation, GPS signal characteristics, and radio frequency measurement techniques. 
+
+### Antenna Fundamentals
+An antenna’s performance is defined by how it directs and receives electromagnetic energy in three-dimensional space. The radiation pattern illustrates this directionality, with gain representing the antenna’s efficiency and directional focus. Key metrics include directivity, which measures how concentrated the beam is, and beamwidth, which defines the angular span of the primary signal. 
+
+Signal polarization describes the orientation of the electromagnetic wave’s field. Understanding the boundary between the near-field and far-field is important for accurate measurements, as true radiation patterns only stabilize in the far-field ($d \ge \frac{2D^2}{\lambda}$). In more advanced setups, phased arrays use multiple individual antenna elements to electronically steer the beam or create intentional signal voids known as nulls.
+
+### GPS/GNSS Antenna Fundamentals
+GPS antennas must capture weak signals across specific frequency bands using right-hand circular polarization. Maintaining a low axial ratio and adequate gain at low elevation angles ensures the antenna can reliably track satellites near the horizon. Commercial aircraft standardly use FRPAs, which act as a baseline, single-element receiver with a fixed hemispherical pattern. CRPAs are multi-element arrays capable of suppressing interference by steering nulls directly toward jammers. Characterizing CRPAs requires testing to evaluate phase and amplitude matching between channels at both the element and array levels.
+
+### Measurement and Test Range Concepts
+Benchtop RF measurements evaluate the fundamental properties of the antenna, capturing S-parameters and voltage standing wave ratio (VSWR) via a Vector Network Analyzer (VNA) to determine effective RF power delivery. To measure spatial properties without environmental interruption, testing occurs in an anechoic chamber, which uses RF-absorbing foam to eliminate multipath interference and reflections.
+
+### SDR and Positioner Integration
+While a VNA provides high precision measurements, evaluating the null-steering of a CRPA requires multi-channel receivers. Software Defined Radios (SDRs) fulfill this role, acting as customizable signal sources and receivers that process RF data digitally. A mechanical positioner aligns the antenna in azimuth, elevation, and roll, sweeping it through specific angular steps to accurately map data to the physical orientation of the Device Under Test (DUT).
+
+---
+
+## Methods
+
+### TP-Link Test Results
+Before characterizing the provided GPS antennas, the team tested commercially available antennas such as the TP-Link. This provided a known reference against manufacturer datasheets to develop a testing methodology. 
+
+The TP-Link antenna was mounted inside the anechoic chamber and connected to a VNA. A calibrated horn antenna was used as the transmitting antenna. The VNA measured the transmission coefficient ($S_{21}$) between the transmitting and receiving antennas across a sweep of 2.1 GHz to 2.8 GHz. The antenna was rotated through a series of angular positions to collect gain data, which was processed in MATLAB to generate 2D radiation patterns.
+
+### Range & Calibration
+All measurements were conducted in the 1x1x3 m³ anechoic chamber at Harvey Mudd College. The separation distance of 1.4 m ensured testing occurred in the far-field region. 
+
+
+### SDR & Positioners
+The HackRF One and the USRP x310 were used alongside GNU Radio to characterize the FRPA and CRPA. This allowed for customization of sampling rates, LNA gain, and bandwidth to conduct tests unattainable with just a VNA (e.g., null tests, SNR, beam steering). 
+
+::: {.callout-note}
+**TODO: Positioner & FRPA Details**
+- Selected positioner and reasoning (Appendix B summary)
+- Control interface and integration with the measurement software
+- Angular step size, range of motion, timing per sweep
+- FRPA used and setup on the range
+- Recorded metrics: pattern cuts, gain, axial ratio, return loss
+:::
+
+---
+
+## Results
+
+### TP-Link Test Results
+The first test measured the reflection coefficient in open air. We expected a decline in reflection coefficient at the transmitting frequencies of 2.4–2.5 GHz (at least -10dB return loss). At 2.4 GHz the return loss was about -20dB, and it remained under -10dB from 2.38 GHz–2.5 GHz, confirming proper VNA calibration.
+
+The antenna gain was calculated using the Friis equation:
+$$ G_{rx} = P_{rx} - P_{tx} - G_{tx} - 20\log_{10}\left(\frac{\lambda}{4\pi d}\right) $$
+*(Where $G_{tx}$ is the calibration antenna gain, $G_{rx}$ is the patch antenna gain, $d$ is the distance between phase centers, and $\lambda$ is the wavelength).*
+
+Using the Schwarzbeck calibration antenna (far-field gain of 12.49 dBi at 2.4 GHz) and a distance $d = 1.45$ m, the measured peak gain initially read 6.3 dBi (short of the 9 dBi expected). After realigning the vertical phase centers and adjusting $d$ to 1.4 m, we calculated a boresight gain of 8.34 dBi at 2.4 GHz, and a peak gain of 9.3 dBi at 2.475 GHz—successfully achieving the datasheet's specification.
+
+### FRPA Results
+The pattern was measured at 1.575 GHz (GPS L1 band). Initial manual trials showed a discontinuity at 270° broadside, likely due to human imprecision and strain on the SMA cable during 360-degree rotation. The datasheet pattern was measured with a circularly polarized signal, while our Schwarzbeck antenna is linearly polarized, resulting in a ~3dB power loss. 
+
+To investigate an unexpected rear lobe, we implemented a ground plane to block waves from reaching the far wall. 
+
+### SDR Measurements vs. VNA
+The first SDR trial showed a similar radiation pattern to the VNA manual measurements, retaining the 270° SMA cable strain anomaly. Future trials will implement cable strain relief and automated turntables to alleviate human positioning errors and optimize sweep times.
